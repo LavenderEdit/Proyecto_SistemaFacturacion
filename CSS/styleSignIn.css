@@ -1,7 +1,7 @@
 @import url('./ReajustadorDeMargenes.css');
 
 body {
-    background-image: url('/Imagenes/LogoYFondo/LC_Frente.jpg');
+    background-image: url('/Imagenes/LogoYFondo/LC_Frente.webp');
     background-size: cover;
     background-position-y: -100px;
     background-position-x: -500px;
