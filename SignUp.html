@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/CSS/styleSignUp.css">
+</head>
+
+<body>
+    <div id="opacidadAzul">
+        <img src="/Imagenes/LogoYFondo/keyfacil-logo-inline.png" alt="logo_keyfacil" id="logoempresa">
+
+        <div id="cajaderegistro">
+            <h1>Registrate</h1>
+            <form action="" method="POST" id="formRegistro">
+                <div class="grupoForm">
+                    <input type="text" class="insertartexto2 ancho" id="nombre" placeholder="Nombres" required>
+                </div>
+                <div class="grupoForm" id="inputApe">
+                    <input type="text" class="insertartexto2" id="apellidoPaterno" placeholder="Apellido paterno"
+                        required>
+                    <input type="text" class="insertartexto2" id="apellidoMaterno" placeholder="Apellido materno"
+                        required>
+                </div>
+                <div class="grupoForm">
+                    <input type="email" class="insertartexto2 ancho" id="email" placeholder="Email" required>
+                </div>
+                <div class="grupoForm">
+                    <input type="password" class="insertartexto2 ancho" id="password" placeholder="Contraseña" required>
+                </div>
+                <div class="grupoForm" id="checkbox">
+                    <input type="checkbox" id="cajitacheck" required>
+                    <span>Acepto los <strong>Términos y Condiciones</strong> y la <strong>Política de Privacidad</strong> de LC-LavenderWeb</span>
+                </div>
+                <button type="submit" class="botondecreado">CREAR CUENTA</button>
+            </form>
+            <a href="SignIn.html">¿Ya tienes una cuenta? Inicia Sesión</a>
+        </div>
+    </div>
+</body>
+
+</html>

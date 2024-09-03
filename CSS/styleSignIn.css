@@ -1,0 +1,141 @@
+@import url('./ReajustadorDeMargenes.css');
+
+body {
+    background-image: url('/Imagenes/LogoYFondo/auth-bg.png');
+    background-size: cover;
+    background-position-y: -100px;
+    background-position-x: -450px;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* Sección de Fondo y Logo */
+#opacidadAzul {
+    background-color: rgba(61, 87, 186, 0.9);
+    height: 100%;
+}
+
+#logoempresa {
+    width: 300px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+/* Sección Crear Cuenta */
+#crearcuenta {
+    position: absolute;
+    left: 0;
+    display: flex;
+    width: 180px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 15% 10%;
+}
+
+#crearcuenta h1 {
+    font-size: 50px;
+    color: white;
+}
+
+#tituloCrearCuenta {
+    width: 300px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#btnRegistro {
+    background-color: transparent;
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 2px white;
+}
+
+#btnRegistro a {
+    color: white;
+    font-size: 15px;
+}
+
+/* Inicio de Sesion */
+#iniciosesion {
+    position: absolute;
+    right: 0;
+    display: flex;
+    width: 520px;
+    height: 100vh;
+    clip-path: ellipse(100% 160% at right center);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 10%;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#iniciosesion h1 {
+    color: #1e0bd0;
+    margin-bottom: 20px;
+}
+
+#formLogin {
+    padding: 20px;
+}
+
+input {
+    border-bottom: 2px solid black;
+    outline: none;
+    text-indent: 10px;
+}
+
+input:focus {
+    border-bottom: 2px solid black;
+    outline: none;
+}
+
+input::placeholder {
+    color: darkgray;
+}
+
+.entradaLogin {
+    width: 350px;
+}
+
+.textoentrada {
+    height: 50px;
+    width: 350px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border: 1px solid darkgray;
+    font-size: 15px;
+    text-indent: 10px;
+}
+
+#btnIniciar {
+    width: 350px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 0;
+    font-weight: bold;
+    color: white;
+    background-color: #1e0bd0;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+#btnIniciar:hover {
+    background-color: #241178;
+}
+
+#recuperar a {
+    color: #1e0bd0;
+    transition: all 0.3s ease-in;
+}
+
+#recuperar a:hover {
+    color: #241178;
+}

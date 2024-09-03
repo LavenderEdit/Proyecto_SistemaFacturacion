@@ -1,0 +1,132 @@
+@import url('./ReajustadorDeMargenes.css');
+
+body {
+    background-image: url('/Imagenes/LogoYFondo/auth-bg.png');
+    background-size: cover;
+    background-position-y: -100px;
+    background-position-x: -450px;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* Sección de Fondo y Logo */
+#opacidadAzul {
+    background-color: rgba(61, 87, 186, 0.9);
+    height: 100%;
+}
+
+#logoempresa {
+    width: 300px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+/* Sección de Registro */
+#cajaderegistro {
+    position: absolute;
+    right: 0;
+    display: flex;
+    width: 520px;
+    height: 100vh;
+    clip-path: ellipse(100% 160% at right center);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 10%;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#cajaderegistro h1 {
+    color: #1e0bd0;
+    margin-bottom: 30px;
+}
+
+#formRegistro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+input:focus {
+    border-bottom: 2px solid black;
+    outline: none;
+}
+
+input::placeholder {
+    color: darkgray;
+    padding-left: 10px;
+}
+
+.insertartexto2 {
+    height: 50px;
+    width: 350px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border: 1px solid darkgray;
+    font-size: 15px;
+}
+
+#inputApe {
+    width: 350px;
+}
+
+#apellidoPaterno,
+#apellidoMaterno {
+    width: 48.7%;
+}
+
+#checkbox {
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+#cajitacheck {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+#cajitacheck::after {
+    border: solid darkgray;
+    border-width: 0 10px 10px 0;
+}
+
+span {
+    margin-left: 13px;
+    width: 100%;
+    font-size: 12.7px;
+    text-align: justify;
+}
+
+.botondecreado {
+    width: 350px;
+    height: 40px;
+    margin-bottom: 45px;
+    border-radius: 5px;
+    border: 0;
+    font-weight: bold;
+    color: white;
+    background-color: #1e0bd0;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.botondecreado:hover {
+    background-color: #241178;
+}
+
+#cajaderegistro a {
+    color: #1e0bd0;
+    transition: all 0.3s ease-in;
+}
+
+#cajaderegistro a:hover {
+    color: #241178;
+}
