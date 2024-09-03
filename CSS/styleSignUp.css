@@ -1,22 +1,24 @@
 @import url('./ReajustadorDeMargenes.css');
+@import url('./ClasesGenerales.css');
 
 body {
-    background-image: url('/Imagenes/LogoYFondo/auth-bg.png');
+    background-image: url('/Imagenes/LogoYFondo/LC_Frente.jpg');
     background-size: cover;
     background-position-y: -100px;
-    background-position-x: -450px;
+    background-position-x: -500px;
     background-repeat: no-repeat;
     height: 100vh;
 }
 
 /* Sección de Fondo y Logo */
 #opacidadAzul {
-    background-color: rgba(61, 87, 186, 0.9);
+    background-color: rgba(0, 0, 128, 0.9);
     height: 100%;
 }
 
 #logoempresa {
-    width: 300px;
+    width: 200px;
+    height: auto;
     position: absolute;
     margin-top: 30px;
     margin-left: 30px;
@@ -39,8 +41,67 @@ body {
 }
 
 #cajaderegistro h1 {
-    color: #1e0bd0;
+    color: #000080;
     margin-bottom: 30px;
+}
+
+#cajaMensaje {
+    position: absolute;
+    left: 0;
+    display: flex;
+    width: 280px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 12% 10%;
+}
+
+#comentario {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    border: 3.5px solid black;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: justify;
+}
+
+#comentario::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; 
+    left: 20px; 
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: black;
+    border-bottom: 0;
+}
+
+#comentario p {
+    cursor: default;
+}
+
+#logoEquipo {
+    border-radius: 60%;
+    width: 50px;
+    height: auto;
+}
+
+#logoIjb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+    margin-right: 80px;
+}
+
+#logoIjb span {
+    color: white;
+    font-weight: bolder;
 }
 
 #formRegistro {
@@ -50,6 +111,10 @@ body {
     width: 600px;
 }
 
+input {
+    text-indent: 10px;
+}
+
 input:focus {
     border-bottom: 2px solid black;
     outline: none;
@@ -57,7 +122,6 @@ input:focus {
 
 input::placeholder {
     color: darkgray;
-    padding-left: 10px;
 }
 
 .insertartexto2 {
@@ -103,6 +167,17 @@ span {
     width: 100%;
     font-size: 12.7px;
     text-align: justify;
+    cursor: default;
+}
+
+.azulita {
+    color: #000080;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.azulita:hover {
+    color: #1e0bd0;
 }
 
 .botondecreado {
@@ -113,20 +188,20 @@ span {
     border: 0;
     font-weight: bold;
     color: white;
-    background-color: #1e0bd0;
+    background-color: #000080;
     cursor: pointer;
-    transition: all 0.3s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 .botondecreado:hover {
-    background-color: #241178;
+    background-color: #1e0bd0;
 }
 
 #cajaderegistro a {
-    color: #1e0bd0;
-    transition: all 0.3s ease-in;
+    color: #000080;
+    transition: all 0.2s ease-in;
 }
 
 #cajaderegistro a:hover {
-    color: #241178;
+    color: #1e0bd0;
 }
