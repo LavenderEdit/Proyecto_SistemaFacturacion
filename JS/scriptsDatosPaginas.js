@@ -5,3 +5,7 @@ export const signInDatos = {
     iconoOjoCerrado : document.getElementById('iconoOjoCerrado'),
     btnMostrarContra : document.getElementById('btnMostrarContra')
 };
+
+export const billAppDatosFactura = {
+
+};

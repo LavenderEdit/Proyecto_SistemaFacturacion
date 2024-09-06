@@ -1,0 +1,256 @@
+@import url('./ReajustadorDeMargenes.css');
+@import url('./ClasesGenerales.css');
+@import url('./OverflowEstilos.css');
+
+body {
+    background-color: #D3D3D3;
+}
+
+#DatosUsuario {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #002A5E;
+    width: 30%;
+    height: 100vh;
+}
+
+#logoWolf {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#logoWolf img {
+    width: 200px;
+    height: auto;
+}
+
+#dropdownOpciones {
+    margin-top: 30px;
+}
+
+#dropdownIcon {
+    width: 30px;
+    height: auto;
+    border-radius: 25px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#dropdownOpciones img:hover {
+    background: #003777;
+}
+
+#dropdownOpciones ul {
+    position: absolute;
+    background: #DFE9F5;
+    transform: translateY(-15%);
+    border: 1px solid #DFE9F5;
+    border-radius: 5px;
+    width: 300px;
+    height: auto;
+    font-size: 15px;
+    padding-block: 10px;
+}
+
+#listaUsuario {
+    height: 70px;
+    text-indent: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#listaUsuario:hover {
+    background-color: lightblue;
+}
+
+#usuarioDatos {
+    display: flex;
+}
+
+#avatarUsuario img {
+    width: 60px;
+    height: auto;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+#avatarUsuario {
+    display: flex;
+    width: auto;
+    justify-content: center;
+}
+
+#datosUsuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 13px;
+}
+
+#usuarioAvatar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-block: 20px;
+}
+
+#usuarioAvatar img {
+    border: 3px solid darkgray;
+    border-radius: 50%;
+    width: 120px;
+    height: auto;
+}
+#empresa {
+    margin-bottom: 15px;
+}
+
+#empresa, #sucursal {
+    width: 90%;
+    height: auto;
+    background-color: #003777;
+    border-radius: 15px;
+}
+
+#empresa label, #sucursal label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #C0C5CE;
+}
+
+#datosEmpresa, #datosSucursal {
+    background-color: transparent;
+    color: white;
+    font-weight: bolder;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+#mainContent {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+#billAppDevelopment {
+    border: 2px solid black;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px;
+    text-align: justify;
+}
+
+/* Clases */
+.background {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 40%;
+}
+
+.ListaSinCambios {
+    display: flex;
+    font-weight: bolder;
+    margin-block: 1px;
+    height: 30px;
+    text-indent: 10px;
+    align-items: center;
+}
+
+/* #000080 */
+
+.lista {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    text-indent: 10px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lista:hover {
+    background-color: lightblue;
+}
+
+.empresa {
+    width: 100%;
+    height: 80px;
+    padding-block: 10px;
+    padding-inline: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.caja {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5px;
+    gap: 10px;
+    height: 278.7px;
+    max-width: 100%;
+    overflow-y: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.boton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.boton img {
+    max-width: 60%;
+    max-height: 60%;
+    margin: 0 auto;
+    filter: brightness(400%);
+    transition: transform 0.3s ease;
+}
+
+.boton:hover img {
+    transform: scale(1.1);
+}
+
+.boton span {
+    font-size: 17.5px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+Jordan,
+
+Te paso algunas instrucciones para el proyecto:
+
+1.- En lugar de usar la figura de una persona, vamos a reemplazarla por un diseño minimalista de una caja con un mensaje simple. Esto es por razones de tiempo y simplicidad.
+
+2.- La sección de la izquierda puede ser replicada según tu criterio, pero no es indispensable.
+
+3.- La sección de ventas, con todos los datos detallados, tampoco necesita ser replicada exactamente. Solo es necesario ingresar los datos básicos de la lista de una venta.
+
+4.- Por favor, asegúrate de usar HTML, CSS, y JS siguiendo un patrón correcto de organización de datos. Es importante que el código sea escalable, así que organiza el código utilizando imports para las funciones repetitivas tanto en JS como en CSS.
+
+Las funciones que crees en JS deben ser legibles y seguir buenas prácticas. Esto incluye:
+
+- Usar nombres descriptivos para las funciones y variables.
+
+- Comentar el código cuando sea necesario para que el propósito de las funciones quede claro.
+
+- Evitar funciones demasiado largas o complicadas, en lugar de eso, dividirlas en funciones más pequeñas y manejables si es posible.
+
+- Asegurarte de que cada función tenga una única responsabilidad clara.
+
+5.- Organiza el código en carpetas de la siguiente manera:
+
+- Imagenes: Para guardar los recursos de la página.
+
+- CSS: Para guardar los archivos CSS.
+
+- JS: Para guardar los archivos JS.
+
+- Los archivos HTML irán directamente en la raíz del proyecto, sin carpeta.
+
+6.- Utiliza nombres claros, concisos y legibles para las IDs y clases en el HTML y JS. Asegúrate de que los nombres sean serios y apropiados para el proyecto.
+
+Gracias por tu ayuda con esto.
+

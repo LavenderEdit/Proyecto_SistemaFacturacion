@@ -15,14 +15,6 @@ body {
     height: 100%;
 }
 
-#logoempresa {
-    width: 200px;
-    height: auto;
-    position: absolute;
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
 /* Sección Crear Cuenta */
 #crearcuenta {
     position: absolute;
@@ -115,32 +107,6 @@ input::placeholder {
     text-indent: 10px;
 }
 
-#entradaContra {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-#btnMostrarContra {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-90%);
-    display: flex;
-    align-items: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#btnMostrarContra svg {
-    transition: all 0.2s ease-in;
-}
-
-#btnMostrarContra svg:hover {
-    stroke: #1e0bd0;
-}
-
 #btnIniciar {
     width: 350px;
     height: 40px;
@@ -165,4 +131,31 @@ input::placeholder {
 
 #recuperar a:hover {
     color: #1e0bd0;
+}
+
+/* Boton Ojo Contraseña */
+#entradaContra {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#btnMostrarContra {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-90%);
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#btnMostrarContra svg {
+    transition: all 0.2s ease-in;
+}
+
+#btnMostrarContra svg:hover {
+    stroke: #1e0bd0;
 }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐺Wolf's Fur🐺</title>
+    <link rel="stylesheet" href="/CSS/styleBillApp.css">
+</head>
+
+<body>
+
+    <div class="background" id="billAppBackground">
+        <div id="DatosUsuario">
+            <div class="datos">
+
+                <div class="logo">
+                    <div id="logoWolf">
+                        <img src="/Imagenes/LogoYFondo/Logo_WolfFur.webp" alt="Wolf's Fur">
+                    </div>
+
+                    <div id="dropdownOpciones">
+                        <img src="/Imagenes/BillAppResources/Botones/Opciones.png" id="dropdownIcon" alt="Opciones">
+                        <ul class="escondido">
+                            <li id="listaUsuario" class="sinCopiar">
+                                <div id="usuarioDatos">
+                                    <div id="avatarUsuario">
+                                        <img src="/Imagenes/BillAppResources/Logos/DefaultUserAvatar.webp" alt="Avatar">
+                                    </div>
+                                    <div id="datosUsuario"> 
+                                        <span id="usuario">JUAN SANTOS PIMENTEL CRUZ</span>
+                                        <span id="correo">manuelsantosp58@gmail.com</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="ListaSinCambios sinCopiar">
+                                Empresa Seleccionada
+                            </li>
+                            <li class="lista">
+                                Gestionar Plan
+                            </li>
+                            <li class="ListaSinCambios sinCopiar">
+                                Usuario
+                            </li>
+                            <li class="lista">
+                                Registrar nueva empresa
+                            </li>
+                            <li class="lista">
+                                Cambiar Contraseña
+                            </li>
+                            <li class="lista">
+                                Cerrar Sesión
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="usuarioAvatar">
+                    <img src="/Imagenes/BillAppResources/Logos/DefaultUserAvatar.webp" alt="Avatar Usuario">
+                </div>
+
+                <div class="empresa caja">
+                    <div id="empresa" class="empresa">
+                        <label for="datosEmpresa">EMPRESA</label>
+                        <select name="empresa" id="datosEmpresa">
+                            <option value="">PIMENTEL CRUZ JUAN SANTOS</option>
+                        </select>
+                    </div>
+                    <div id="sucursal" class="empresa">
+                        <label for="datosSucursal">SUCURSAL</label>
+                        <select name="sucursal" id="datosSucursal">
+                            <option value="">LUBRICANTES CLAUDIA</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="botones">
+                <button type="button" class="boton" style="background-color: cadetblue;">
+                    <img src="/Imagenes/BillAppResources/Botones/RealizarVenta.png" alt="Realizar Venta">
+                    <span>Realizar venta</span>
+                </button>
+                <button type="button" class="boton" style="background-color: #551a8b;">
+                    <img src="/Imagenes/BillAppResources/Botones/VentasRealizadas.png" alt="Ventas">
+                    <span>Ventas Realizadas</span>
+                </button>
+                <button type="button" class="boton" style="background-color: #3d0c02;">
+                    <img src="/Imagenes/BillAppResources/Botones/GuiaRemision.png" alt="Guia de Remision">
+                    <span>Guías de Remisión</span>
+                </button>
+                <button type="button" class="boton" style="background-color: #003366;">
+                    <img src="/Imagenes/BillAppResources/Botones/Proformas.png" alt="Proformas">
+                    <span>Proformas</span>
+                </button>
+                <button type="button" class="boton" style="background-color: #7393B3;">
+                    <img src="/Imagenes/BillAppResources/Botones/Reportes.png" alt="Reportes">
+                    <span>Reportes</span>
+                </button>
+                <button type="button" class="boton" style="background-color: #8A9A5B;">
+                    <img src="/Imagenes/BillAppResources/Botones/ClientesYProveedores.png" alt="Clientes y Proveedores">
+                    <span>Clientes y Proveedores</span>
+                </button>
+                <button type="button" class="boton" style="background-color: #899499;">
+                    <img src="/Imagenes/BillAppResources/Botones/ProductosYServicios.png" alt="Productos y Servicios">
+                    <span>Productos y Servicios</span>
+                </button>
+                <button type="button" class="boton" style="background-color: #B2BEB5;">
+                    <img src="/Imagenes/BillAppResources/Botones/Configuracion.png" alt="Configuracion">
+                    <span>Configuración</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mainContent">
+            <div id="billAppDevelopment">
+                    <p>¡Bienvenido a la App de Sistema de Facturación de 🐺Wolf's Fur🐺! 😎Al parecer ya cuentas con acceso
+                        total a nuestras funciones, con estas administra tu negocio de la mejor manera😎</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/JS/scriptBillApp.js"></script>
+</body>
+
+</html>
