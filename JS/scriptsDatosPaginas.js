@@ -7,5 +7,6 @@ export const signInDatos = {
 };
 
 export const billAppDatosFactura = {
-
+    iconoDatos: document.getElementById('dropdownIcon'),
+    dropdownLista: document.getElementById('dropdownLista')
 };
