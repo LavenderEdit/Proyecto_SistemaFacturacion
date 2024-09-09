@@ -8,5 +8,7 @@ export const signInDatos = {
 
 export const billAppDatosFactura = {
     iconoDatos: document.getElementById('dropdownIcon'),
-    dropdownLista: document.getElementById('dropdownLista')
+    dropdownLista: document.getElementById('dropdownLista'),
+    buttons : document.querySelectorAll('.boton'),
+    contentContainer : document.getElementById('mainContent'),
 };

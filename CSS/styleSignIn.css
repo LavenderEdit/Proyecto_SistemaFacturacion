@@ -1,4 +1,5 @@
 @import url('./ReajustadorDeMargenes.css');
+@import url('./ClasesGenerales.css');
 
 body {
     background-image: url('/Imagenes/LogoYFondo/LC_Frente.webp');

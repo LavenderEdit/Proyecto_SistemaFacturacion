@@ -1,6 +1,7 @@
 @import url('./ReajustadorDeMargenes.css');
 @import url('./ClasesGenerales.css');
 @import url('./OverflowEstilos.css');
+@import url('./MensajesInteractivos.css');
 
 body {
     background-color: #D3D3D3;
