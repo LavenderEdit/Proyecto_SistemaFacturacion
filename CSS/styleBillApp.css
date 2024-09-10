@@ -2,35 +2,54 @@
 @import url('./ClasesGenerales.css');
 @import url('./OverflowEstilos.css');
 @import url('./MensajesInteractivos.css');
+@import url('./MediaQueries.css');
 
 body {
     background-color: #D3D3D3;
+    overflow: auto;
 }
 
+/* Contenedor Pagina Entera */
+.background {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sidebar */
 #DatosUsuario {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     background-color: #002A5E;
-    width: 30%;
+    width: 25%;
     height: 100vh;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección Logo Empresa y dropdown opciones Usuario */
+.logo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }
 
 #logoWolf {
     margin-top: 15px;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 #logoWolf img {
-    width: 200px;
+    width: 100%;
+    max-width: 180px;
     height: auto;
 }
 
 #dropdownOpciones {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 #dropdownIcon {
-    width: 30px;
+    width: 25px;
     height: auto;
     border-radius: 25px;
     padding: 5px;
@@ -39,7 +58,7 @@ body {
 }
 
 #dropdownOpciones img:hover {
-    background: #003777;
+    background: #004487;
 }
 
 #dropdownOpciones ul {
@@ -48,25 +67,13 @@ body {
     transform: translateY(-15%);
     border: 1px solid #DFE9F5;
     border-radius: 5px;
-    width: 300px;
+    width: 290px;
     height: auto;
-    font-size: 15px;
-    padding-block: 10px;
+    font-size: 14px;
+    padding-block: 8px;
 }
 
-#listaUsuario {
-    height: 70px;
-    text-indent: 10px;
-    padding-top: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#listaUsuario:hover {
-    background-color: lightblue;
-}
-
+/* Datos del usuario dentro del dropdown */
 #usuarioDatos {
     display: flex;
 }
@@ -92,74 +99,19 @@ body {
     font-size: 13px;
 }
 
-#usuarioAvatar {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    padding-block: 20px;
-}
-
-#usuarioAvatar img {
-    border: 3px solid darkgray;
-    border-radius: 50%;
-    width: 120px;
-    height: auto;
-}
-#empresa {
-    margin-bottom: 15px;
-}
-
-#empresa, #sucursal {
-    width: 90%;
-    height: auto;
-    background-color: #003777;
-    border-radius: 15px;
-}
-
-#empresa label, #sucursal label {
-    font-size: 14px;
+/* Estilos para la lista de usuario */
+#listaUsuario {
+    height: 70px;
+    text-indent: 10px;
+    padding-top: 10px;
     font-weight: bold;
-    color: #C0C5CE;
-}
-
-#datosEmpresa, #datosSucursal {
-    background-color: transparent;
-    color: white;
-    font-weight: bolder;
-    height: 40px;
-    border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-#mainContent {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4f4f4;
-}
-
-#billAppDevelopment {
-    border: 2px solid black;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    max-width: 500px;
-    margin: 20px;
-    text-align: justify;
-}
-
-/* Clases */
-.background {
-    display: flex;
-    flex-direction: row;
-}
-
-.logo {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 40%;
+#listaUsuario:hover {
+    background-color: #66b3ff;
+    color: #002A5E;
 }
 
 .ListaSinCambios {
@@ -170,8 +122,6 @@ body {
     text-indent: 10px;
     align-items: center;
 }
-
-/* #000080 */
 
 .lista {
     display: flex;
@@ -187,11 +137,52 @@ body {
     background-color: lightblue;
 }
 
-.empresa {
+/* Estilos Avatar */
+#usuarioAvatar {
+    display: flex;
+    height: auto;
     width: 100%;
-    height: 80px;
+    justify-content: center;
+    padding-block: 15px;
+}
+
+#usuarioAvatar img {
+    border: 3px solid #C0C5CE;
+    border-radius: 50%;
+    height: auto;
+}
+
+/* Sección Empresa y Sucursal */
+#empresa,
+#sucursal {
+    width: 95%;
+    background-color: #004487;
+    border-radius: 12px;
+    margin: 10px auto;
+}
+
+#empresa label,
+#sucursal label {
+    font-weight: bold;
+    color: #DFE9F5;
+}
+
+#datosEmpresa,
+#datosSucursal {
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bolder;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Sección Inputs Empresa Información */
+.empresa {
     padding-block: 10px;
-    padding-inline: 9px;
+    text-indent: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -202,13 +193,12 @@ body {
     margin-bottom: 50px;
 }
 
+/* Sección Botones */
 .botones {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 5px;
-    gap: 10px;
-    height: 278.7px;
-    max-width: 100%;
+    height: fit-content;
+    overflow-x: hidden;
     overflow-y: auto;
     margin: 0 auto;
     box-sizing: border-box;
@@ -219,11 +209,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 150px;
-    height: 150px;
+    width: 100%;
     border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
     font-weight: bold;
     cursor: pointer;
     border: none;
@@ -238,8 +225,6 @@ body {
 }
 
 .boton img {
-    max-width: 60%;
-    max-height: 60%;
     margin: 0 auto;
     filter: brightness(400%);
     transition: transform 0.3s ease;
@@ -250,8 +235,27 @@ body {
 }
 
 .boton span {
-    font-size: 17.5px;
     margin-top: 10px;
     color: white;
     text-align: center;
+}
+
+/* Sección contenido Principal */
+#mainContent {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+/* Pagina Default */
+#billAppDevelopment {
+    border: 2px solid black;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px;
+    text-align: justify;
 }

@@ -1,0 +1,219 @@
+@media (min-width: 1900px) {
+    #usuarioAvatar img {
+        max-width: 150px;
+    }
+
+    #billAppDevelopment {
+        font-size: 20px;
+    }
+
+    #empresa label,
+    #sucursal label {
+        font-size: 15px;
+    }
+
+    #datosEmpresa,
+    #datosSucursal {
+        font-size: 16px;
+    }
+
+    .empresa {
+        height: 80px;
+    }
+
+    .botones {
+        max-height: 48vh;
+        max-width: 100%;
+        gap: 10px;
+    }
+
+    .boton {
+        max-width: 200px;
+        height: 200px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .boton img {
+        max-width: 70%;
+        max-height: 70%;
+    }
+
+    .boton span {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1700px) and (max-width: 1899px) {
+    #usuarioAvatar img {
+        max-width: 160px;
+    }
+
+    #billAppDevelopment {
+        font-size: 18px;
+    }
+
+    #empresa label,
+    #sucursal label {
+        font-size: 14px;
+    }
+
+    #datosEmpresa,
+    #datosSucursal {
+        font-size: 15px;
+    }
+
+    .empresa {
+        height: 80px;
+    }
+
+    .botones {
+        max-height: 40vh;
+        max-width: 100%;
+        gap: 10px;
+    }
+
+    .boton {
+        max-width: 170px;
+        height: 170px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .boton img {
+        max-width: 60%;
+        max-height: 60%;
+    }
+
+    .boton span {
+        font-size: 17.5px;
+    }
+}
+
+/*Mi Resolución*/
+@media (min-width: 1500px) and (max-width: 1699px) {
+    #usuarioAvatar img {
+        max-width: 150px;
+    }
+
+    #empresa label,
+    #sucursal label {
+        font-size: 13px;
+    }
+
+    #datosEmpresa,
+    #datosSucursal {
+        font-size: 14px;
+    }
+
+    .empresa {
+        height: 80px;
+    }
+
+    .botones {
+        max-height: 35vh;
+        max-width: 100%;
+        gap: 10px;
+    }
+
+    .boton {
+        max-width: 160px;
+        height: 160px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .boton img {
+        max-width: 60%;
+        max-height: 60%;
+    }
+
+    .boton span {
+        font-size: 17.5px;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1499px) {
+    #usuarioAvatar img {
+        width: 130px;
+    }
+
+    #empresa label,
+    #sucursal label {
+        font-size: 11px;
+    }
+
+    #datosEmpresa,
+    #datosSucursal {
+        font-size: 12px;
+    }
+
+    .empresa {
+        height: 75px;
+    }
+
+    .botones {
+        max-height: 30vh;
+        max-width: 100%;
+        gap: 10px;
+    }
+
+    .boton {
+        max-width: 140px;
+        height: 140px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .boton img {
+        max-width: 55%;
+        max-height: 55%;
+    }
+
+    .boton span {
+        font-size: 17.5px;
+    }
+}
+
+/* Media query para pantallas entre 1000px y 1299px */
+@media (min-width: 1000px) and (max-width: 1299px) {
+    #usuarioAvatar img {
+        width: 120px;
+    }
+
+    #empresa label,
+    #sucursal label {
+        font-size: 10px;
+    }
+
+    #datosEmpresa,
+    #datosSucursal {
+        font-size: 11px;
+    }
+
+    .empresa {
+        height: 35px;
+    }
+
+    .botones {
+        max-height: 32vh;
+        gap: 8px;
+        max-width: 100%;
+    }
+
+    .boton {
+        max-width: 120px;
+        height: 120px;
+        padding: 8px;
+        margin: 8px;
+    }
+
+    .boton img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+
+    .boton span {
+        font-size: 15px;
+    }
+}
