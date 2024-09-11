@@ -1,8 +1,12 @@
+/* Imports Generales */
 @import url('./ReajustadorDeMargenes.css');
 @import url('./ClasesGenerales.css');
 @import url('./OverflowEstilos.css');
 @import url('./MensajesInteractivos.css');
 @import url('./MediaQueries.css');
+
+/* Imports Paginas */
+@import url('./styleRealizarVenta.css');
 
 body {
     background-color: #D3D3D3;
