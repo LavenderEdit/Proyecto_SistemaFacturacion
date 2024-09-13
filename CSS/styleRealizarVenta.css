@@ -1,0 +1,262 @@
+/* Sección Proforma Check */
+#realizarVenta {
+    width: 100%;
+    height: 100%;
+}
+
+#tituloRV {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 60%;
+    margin-left: 10px;
+}
+
+#tituloRV h2 {
+    font-weight: bold;
+    font-size: 25px;
+    margin-block: 15px;
+}
+
+#contenedorProformaCheck {
+    display: flex;
+    flex-direction: row;
+    margin-block: 15px;
+}
+
+#contenedorProformaCheck label {
+    font-size: 19px;
+}
+
+#proformaCheck[type="checkbox"] {
+    width: 1.5em;
+    height: 1.5rem;
+    accent-color: darkblue;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#proformaCheck[type="checkbox"]:hover {
+    box-shadow: 0 0 15px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+#formDesarrollo {
+    display: grid;
+}
+
+/* Sección Cabecera Datos */
+#headerForm {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    height: 200px;
+}
+
+#formOpciones {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+}
+
+.entrada {
+    height: 50px;
+    margin-block: 10px;
+    position: relative;
+}
+
+.importante input, .importante select {
+    height: 45px;
+    width: 90%;
+    font-size: 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    text-indent: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.importante input:hover, .importante select:hover {
+    border: 1px solid darkblue;
+}
+
+#tipoComprobante, #tipoOperacion {
+    background-color: lightgray;
+}
+
+#tipoComprobante:hover, #tipoOperacion:hover {
+    border: none;
+}
+
+.entrada label {
+    position: absolute;
+    bottom: -8px;
+    left: 15px;
+    font-size: 12px;
+    color: #333;
+    background-color: transparent;
+    padding: 0 5px;
+    z-index: 0;
+}
+
+/* Sección Cabecera Botones */
+
+.extras {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-inline-start: 10px;
+}
+
+.extras button {
+    padding: 8px;
+    width: 165px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+/* Sección Cuerpo del Form */
+#bodyForm {
+    background-color: lightgray;
+    border: 1px solid black;
+    height: 300px;
+}
+
+/* Sección footer del Form */
+#footerForm {
+    display: block;
+    border: none;
+    height: 150px;
+}
+
+#BuscadorProducto {
+    padding: 10px;
+}
+
+#buscarProducto {
+    width: 100%;
+    height: 45px;
+    text-indent: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+#buscarProducto:hover {
+    border: 1px solid black;
+}
+
+#totalContenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+}
+
+#contenedorTotal {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    justify-content: baseline;
+    align-items: center;
+    gap: 60%;
+    width: 540px;
+    height: 55px;
+    background-color: lightgray;
+    text-indent: 10px;
+}
+
+#contenedorTotal span {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#botonesEnviar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    gap: 7%;
+}
+
+#botonesEnviar button {
+    height: 100%;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*
+#registrarCliente {}
+
+#tipoID {}
+
+#separador {}
+
+#tipoRazNom {}
+
+#direccion {}
+
+
+
+#FechaEmi {}
+
+#fecEmision {}
+
+#FechaVenci {}
+
+#fecVencimiento {}
+
+#Comprobante {}
+
+#tipoComprobante {}
+
+#SerieFact {}
+
+#serieFactura {}
+
+#TipoOpe {}
+
+#tipoOperacion {}
+
+#formExtras {}
+
+#bodyForm {}
+
+#footerForm {}
+
+#BuscadorProducto {}
+
+#buscarProducto {}
+
+#totalContenedor {}
+
+#contenedorTotal {}
+
+#informacionComprobante {}
+
+#GananciaTotal {}
+
+Clases
+.importante {}
+
+.contenedorLista {}
+
+.extras {}
+
+.infoComp {}
+
+Botones
+.extras button {}
+
+*/

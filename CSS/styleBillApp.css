@@ -10,7 +10,7 @@
 
 body {
     background-color: #D3D3D3;
-    overflow: auto;
+    overflow:hidden;
 }
 
 /* Contenedor Pagina Entera */

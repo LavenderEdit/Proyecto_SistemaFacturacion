@@ -1,41 +1,126 @@
 <div id="realizarVenta">
     <div id="tituloRV">
         <h2>Tu Venta</h2>
-        <input 
-        type="checkbox"
-        id="proformaCheck"
-        name="checkProforma"
-        value="checkProforma"
-        aria-label="Check Proforma">
-        <label for="proformaCheck">PROFORMA</label>
+        <div id="contenedorProformaCheck">
+            <input type="checkbox" id="proformaCheck" name="checkProforma" value="checkProforma"
+                aria-label="Check Proforma">
+            <label for="proformaCheck">PROFORMA</label>
+        </div>
     </div>
     <form action="" method="post" id="formDesarrollo">
         <div id="headerForm">
-            <div id="formOpciones">
-                <input type="search" name="" id="" placeholder="Cliente" autocomplete="off">
-                <input type="date" name="" id="">
-                <input type="date" name="" id="">
-                <input type="text" name="" id="" value="BOLETA DE VENTA ELECTRONICA">
-                <select name="" id="">
-                    <option value="">BB04</option>
-                </select>
-                <input type="text" disabled="disabled" name="" id="" value="VENTA INTERNA">
+            <div id="formOpciones" class="importante">
+                <div id="BuscadorCliente" class="entrada">
+                    <input type="search" name="" id="buscarCliente" placeholder="Cliente" autocomplete="off">
+                    <div class="contenedorLista escondido">
+                        <li>
+                            <span>Resultados de la busqueda</span>
+                            <button id="registrarCliente"></button>
+                        </li>
+                        <li>
+                            <span id="tipoID">10739450719</span>
+                            <span id="separador">>></span>
+                            <span id="tipoRazNom">JUAN SANTOS PIMENTEL LALANGUI</span>
+                            <span id="direccion"></span>
+                        </li>
+                    </div>
+                </div>
+                <div id="FechaEmi" class="entrada">
+                    <input type="date" name="" id="fecEmision">
+                    <label for="fecEmision">Fecha de emisión</label>
+                </div>
+                <div id="FechaVenci" class="entrada">
+                    <input type="date" name="" id="fecVencimiento">
+                    <label for="fecVencimiento">Fecha de vcto.</label>
+                </div>
+                <div id="Comprobante" class="entrada">
+                    <input type="text" disabled="disabled" name="" id="tipoComprobante"
+                        value="BOLETA DE VENTA ELECTRONICA">
+                    <label for="tipoComprobante">Tipo de comprobante</label>
+                </div>
+                <div id="SerieFact" class="entrada">
+                    <select name="" id="serieFactura">
+                        <option value="">BB04</option>
+                    </select>
+                    <label for="serieFactura">Serie</label>
+                </div>
+                <div id="TipoOpe" class="entrada">
+                    <input type="text" disabled="disabled" name="" id="tipoOperacion" value="VENTA INTERNA">
+                    <label for="tipoOperacion">Tipo de Operación</label>
+                </div>
             </div>
-            <div id="formExtras">
-                <button type="button">PLACA</button>
-                <button type="button">ORD. COMPRA</button>
-                <button type="button">GUI. REMISIÓN</button>
-                <button type="button">OBSERVACIONES</button>
-                <button type="button">CONDI. PAGO</button>
-                <button type="button">OTROS</button>
+            <div id="formExtras" class="extras">
+                <button type="button" style="background-color: olive;">PLACA</button>
+                <button type="button" style="background-color: chocolate;">ORD. COMPRA</button>
+                <button type="button" style="background-color: brown;">GUI. REMISIÓN</button>
+                <button type="button" style="background-color: cadetblue;">OBSERVACIONES</button>
+                <button type="button" style="background-color: darkcyan;">CONDI. PAGO</button>
+                <button type="button" style="background-color: darkgoldenrod;">OTROS</button>
             </div>
         </div>
-        <div id="bodyForm">
-
-        </div>
+        <div id="bodyForm"></div>
         <div id="footerForm">
-            <input type="search" name="" id="" placeholder="😎Buscar producto😎">
-            
+            <div id="BuscadorProducto">
+                <input type="search" name="" id="buscarProducto" placeholder="Buscar producto">
+            </div>
+            <div id="totalContenedor">
+                <div id="contenedorTotal">
+                    <span>TOTAL</span>
+                    <span id="GananciaTotal">0.00</span>
+                </div>
+                <div id="informacionComprobante" class="infoComp sinCopiar escondido">
+                    <ul>
+                        <li>
+                            <span>ANTICIPOS</span>
+                            <span>0.00</span>
+                        </li>
+                        <li>
+                            <span>DSCTO.</span>
+                            <span>0.00</span>
+                        </li>
+                        <li>
+                            <span>GRAVADO</span>
+                            <span>0.00</span>
+                        </li>
+                        <li>
+                            <span>EXONERADO</span>
+                            <span>0.00</span>
+                        </li>
+                        <li>
+                            <span>INAFECTO</span>
+                            <span>0.00</span>
+                        </li>
+                        <li>
+                            <span>EXPORTACIÓN</span>
+                            <span>0.00</span>
+                        </li>
+                        <li>
+                            <span>GRATUITO</span>
+                            <span>0.00</span>
+                        </li>
+                        <li>
+                            <span>I.S.C.</span>
+                            <span>0.00</span>
+                        </li>
+                        <li>
+                            <span>I.G.V.</span>
+                            <span>0.00</span>
+                        </li>
+                        <li>
+                            <span>R.C.</span>
+                            <span>0.00</span>
+                        </li>
+                        <li>
+                            <span>I.C.B.P.E.R.</span>
+                            <span>0.00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="botonesEnviar">
+                    <button type="button" style="background-color: darkred;">Limpiar</button>
+                    <button type="submit" style="background-color: darkgreen;">Procesar</button>
+                </div>
+            </div>
         </div>
     </form>
 </div>
