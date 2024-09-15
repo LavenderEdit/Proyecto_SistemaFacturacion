@@ -1,4 +1,4 @@
-import {signInDatos, billAppDatosFactura} from './scriptsDatosPaginas.js';
+import {signInDatos, billAppDatosFactura, realizarVentaDatos} from './scriptsDatosPaginas.js';
 
 //Función para volver visible la contraseña
 export function togglePassword() {
@@ -44,4 +44,19 @@ export function showOptionList() {
         });
     }
 }
+
+export function showInfoTotal() {
+    if (realizarVentaDatos.contenedorTotal) {
+        realizarVentaDatos.contenedorTotal.addEventListener('mouseenter', function () {
+            realizarVentaDatos.infoTotal.classList.remove('escondido');
+            realizarVentaDatos.infoTotal.classList.add('activo');
+        });
+
+        realizarVentaDatos.contenedorTotal.addEventListener('mouseleave', function () {
+            realizarVentaDatos.infoTotal.classList.remove('activo');
+            realizarVentaDatos.infoTotal.classList.add('escondido');
+        });
+    }
+}
+
 

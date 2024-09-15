@@ -124,7 +124,8 @@
 /* Sección Cuerpo del Form */
 #bodyForm {
     background-color: lightgray;
-    border: 1px solid black;
+    border-top: 2px solid darkgray;
+    border-bottom: 2px solid darkgray;	
     height: 300px;
 }
 
@@ -164,13 +165,13 @@
     border: none;
     border-radius: 10px;
     padding: 15px;
-    justify-content: baseline;
     align-items: center;
     gap: 60%;
     width: 540px;
     height: 55px;
     background-color: lightgray;
     text-indent: 10px;
+    z-index: 999;
 }
 
 #contenedorTotal span {
@@ -195,6 +196,34 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+/* Bloque que aparecera mostrando datos de total de factura */
+#informacionComprobante {
+    position: absolute;
+    transform: translate(100%, -80%);
+    border: 2px solid black;
+    background-color: white;
+    z-index: 1000;
+    padding: 20px;
+}
+
+#informacionComprobante li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 5px;
+}
+
+.oneSpan {
+    font-weight: bold;
+    flex: 1;
+}
+
+.twoSpan {
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
 
 /*
 #registrarCliente {}
@@ -243,7 +272,7 @@
 
 #contenedorTotal {}
 
-#informacionComprobante {}
+
 
 #GananciaTotal {}
 

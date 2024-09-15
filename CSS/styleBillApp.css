@@ -10,7 +10,7 @@
 
 body {
     background-color: #D3D3D3;
-    overflow:hidden;
+
 }
 
 /* Contenedor Pagina Entera */
@@ -75,6 +75,7 @@ body {
     height: auto;
     font-size: 14px;
     padding-block: 8px;
+    z-index: 1000;
 }
 
 /* Datos del usuario dentro del dropdown */

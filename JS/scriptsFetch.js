@@ -27,6 +27,7 @@ export function cambioPagina() {
       switch (buttonText) {
         case "Realizar venta":
           url = "RealizarVenta.html";
+          showModal('successModal', 'Exito');
           break;
         case "Ventas Realizadas":
           url = "VentasRealizadas.html";
