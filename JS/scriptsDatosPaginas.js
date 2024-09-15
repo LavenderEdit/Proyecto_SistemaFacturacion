@@ -12,8 +12,3 @@ export const billAppDatosFactura = {
     buttons : document.querySelectorAll('.boton'),
     contentContainer : document.getElementById('mainContent'),
 };
-
-export const realizarVentaDatos = {
-    contenedorTotal : document.getElementById('contenedorTotal'),
-    infoTotal : document.getElementById('informacionComprobante')
-};

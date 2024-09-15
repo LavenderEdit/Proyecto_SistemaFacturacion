@@ -224,6 +224,30 @@
     margin-left: 20px;
 }
 
+/* Buscador de Clientes */
+.contenedorLista {
+    position: absolute;
+    background-color: white;
+    z-index: 100;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translate(3% , 2%);
+    width: 90%;
+}
+
+.contenedorLista li {
+    height: 100%;
+    text-indent: 15px;
+}
+
+.default {
+    padding-block: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.cliente {
+
+}
 
 /*
 #registrarCliente {}

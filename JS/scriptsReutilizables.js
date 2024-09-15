@@ -1,4 +1,4 @@
-import {signInDatos, billAppDatosFactura, realizarVentaDatos} from './scriptsDatosPaginas.js';
+import {signInDatos, billAppDatosFactura, } from './scriptsDatosPaginas.js';
 
 //Función para volver visible la contraseña
 export function togglePassword() {
@@ -46,16 +46,21 @@ export function showOptionList() {
 }
 
 export function showInfoTotal() {
-    if (realizarVentaDatos.contenedorTotal) {
-        realizarVentaDatos.contenedorTotal.addEventListener('mouseenter', function () {
-            realizarVentaDatos.infoTotal.classList.remove('escondido');
-            realizarVentaDatos.infoTotal.classList.add('activo');
+    const containerTotal = document.getElementById('contenedorTotal');
+    const totalInfo = document.getElementById('informacionComprobante');
+
+    if (containerTotal && totalInfo) { 
+        containerTotal.addEventListener('mouseenter', function () {
+            totalInfo.classList.remove('escondido');
+            totalInfo.classList.add('activo');
         });
 
-        realizarVentaDatos.contenedorTotal.addEventListener('mouseleave', function () {
-            realizarVentaDatos.infoTotal.classList.remove('activo');
-            realizarVentaDatos.infoTotal.classList.add('escondido');
+        containerTotal.addEventListener('mouseleave', function () {
+            totalInfo.classList.remove('activo');
+            totalInfo.classList.add('escondido');
         });
+    } else {
+        console.error('No se encontraron los elementos necesarios en realizarVentaDatos.');
     }
 }
 
