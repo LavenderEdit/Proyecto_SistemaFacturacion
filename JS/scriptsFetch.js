@@ -1,11 +1,18 @@
 import { billAppDatosFactura } from "./scriptsDatosPaginas.js";
+import { showInfoTotal, showSearchBar } from "./scriptsReutilizables.js";
 import { showModal, setupModalCloseButtons } from "./scriptMensajes.js";
+
+function cargarDatos() {
+  showInfoTotal();
+  showSearchBar();
+}
 
 function cargarPagina(url) {
   fetch(url)
     .then((response) => response.text())
     .then((html) => {
       billAppDatosFactura.contentContainer.innerHTML = html;
+      cargarDatos();
     })
     .catch((error) => {
       showModal("errorModal", error);

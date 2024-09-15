@@ -103,7 +103,6 @@
 }
 
 /* Sección Cabecera Botones */
-
 .extras {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -171,7 +170,6 @@
     height: 55px;
     background-color: lightgray;
     text-indent: 10px;
-    z-index: 999;
 }
 
 #contenedorTotal span {
@@ -200,8 +198,11 @@
 /* Bloque que aparecera mostrando datos de total de factura */
 #informacionComprobante {
     position: absolute;
-    transform: translate(100%, -80%);
+    transform: translate(55%, -101.5%);
+    width: 15%;
     border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
     background-color: white;
     z-index: 1000;
     padding: 20px;
@@ -224,9 +225,87 @@
     margin-left: 20px;
 }
 
+/* Buscador de Clientes */
+.contenedorLista {
+    position: absolute;
+    background-color: white;
+    z-index: 100;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translate(3.5% , 0.4%);
+    width: 89%;
+}
+
+.contenedorLista li {
+    padding-block: 18px;
+    text-indent: 6px;
+    height: 100%;
+}
+
+.contenedorLista li:nth-child(1) {
+    gap: 25%;
+}
+
+/* Caja contenedora de la lista por Default */
+.default {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.default span {
+    font-size: 13px;
+    text-align: center;
+    font-weight: bolder;
+    color: rgba(60, 60, 60, 1)      ;
+}
+
+#registrarCliente {
+    width: 140px;
+    height: 100%;
+    border-color: rgba(94, 94, 239, 0.2);
+    color: rgb(94, 94, 239);
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#registrarCliente:hover {
+    border-color: rgba(94, 94, 239, 1);
+    background-color:rgba(0,0,255,0.2);
+}
+/* Lista de clientes resultados de la busqueda */
+.cliente {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    text-align: center;
+    font-size: 13px;
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: gray;
+    font-weight: bold;
+    transition: all 0.1s ease;
+}
+
+.cliente:hover {
+    background-color: rgba(205, 209, 228, 1);
+    color: black;
+}
+
+#tipoID {}
+
+#separador {}
+
+#tipoRazNom {
+    padding-inline: 5px;
+}
+
+#direccion {}
 
 /*
-#registrarCliente {}
 
 #tipoID {}
 
@@ -279,7 +358,7 @@
 Clases
 .importante {}
 
-.contenedorLista {}
+
 
 .extras {}
 
