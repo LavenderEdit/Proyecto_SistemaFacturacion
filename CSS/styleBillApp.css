@@ -5,6 +5,9 @@
 @import url('./MensajesInteractivos.css');
 @import url('./MediaQueries.css');
 
+/* Colores de Letras Puros */
+@import url('./Colores.css');
+
 /* Imports Paginas */
 @import url('./styleRealizarVenta.css');
 

@@ -1,10 +1,17 @@
 import { billAppDatosFactura } from "./scriptsDatosPaginas.js";
-import { showInfoTotal, showSearchBar } from "./scriptsReutilizables.js";
+import {
+  showInfoTotal,
+  showClientSearchBar,
+  showProductSearchBar,
+  changeTypeDocument,
+} from "./scriptsReutilizables.js";
 import { showModal, setupModalCloseButtons } from "./scriptMensajes.js";
 
 function cargarDatos() {
   showInfoTotal();
-  showSearchBar();
+  showClientSearchBar();
+  showProductSearchBar();
+  changeTypeDocument();
 }
 
 function cargarPagina(url) {
@@ -12,7 +19,9 @@ function cargarPagina(url) {
     .then((response) => response.text())
     .then((html) => {
       billAppDatosFactura.contentContainer.innerHTML = html;
-      cargarDatos();
+      if (url === "RealizarVenta.html") {
+        cargarDatos();
+      }
     })
     .catch((error) => {
       showModal("errorModal", error);
@@ -34,7 +43,7 @@ export function cambioPagina() {
       switch (buttonText) {
         case "Realizar venta":
           url = "RealizarVenta.html";
-          showModal('successModal', 'Exito');
+          showModal("successModal", "Exito");
           break;
         case "Ventas Realizadas":
           url = "VentasRealizadas.html";

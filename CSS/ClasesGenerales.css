@@ -5,6 +5,10 @@
     user-select: none;
 }
 
+.negrita {
+    font-weight: bolder;
+}
+
 #logoempresa {
     width: 200px;
     height: auto;

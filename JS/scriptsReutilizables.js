@@ -1,6 +1,5 @@
-import {signInDatos, billAppDatosFactura, realizarVentaDatos} from './scriptsDatosPaginas.js';
+import { signInDatos, billAppDatosFactura } from "./scriptsDatosPaginas.js";
 
-//Función para volver visible la contraseña
 export function togglePassword() {
   if (signInDatos.btnMostrarContra && signInDatos.inputContra) {
     signInDatos.btnMostrarContra.addEventListener("click", function () {
@@ -17,7 +16,6 @@ export function togglePassword() {
   }
 }
 
-// Función para mostrar la lista de opciones
 export function showOptionList() {
   if (billAppDatosFactura.iconoDatos) {
     billAppDatosFactura.iconoDatos.addEventListener("click", function (event) {
@@ -32,7 +30,6 @@ export function showOptionList() {
       }
     });
 
-    // Añadir un listener al documento para cerrar el dropdown si se hace clic fuera
     document.addEventListener("click", function (event) {
       if (
         !billAppDatosFactura.dropdownLista.contains(event.target) &&
@@ -48,20 +45,23 @@ export function showOptionList() {
 }
 
 export function showInfoTotal() {
-    if (realizarVentaDatos.contenedorTotal) {
-        realizarVentaDatos.contenedorTotal.addEventListener('mouseenter', function () {
-            realizarVentaDatos.infoTotal.classList.remove('escondido');
-            realizarVentaDatos.infoTotal.classList.add('activo');
-        });
+  const containerTotal = document.getElementById("contenedorTotal");
+  const infoTotal = document.getElementById("informacionComprobante");
 
-        realizarVentaDatos.contenedorTotal.addEventListener('mouseleave', function () {
-            realizarVentaDatos.infoTotal.classList.remove('activo');
-            realizarVentaDatos.infoTotal.classList.add('escondido');
-        });
-    }
+  if (containerTotal) {
+    containerTotal.addEventListener("mouseenter", function () {
+      infoTotal.classList.remove("escondido");
+      infoTotal.classList.add("activo");
+    });
+
+    containerTotal.addEventListener("mouseleave", function () {
+      infoTotal.classList.remove("activo");
+      infoTotal.classList.add("escondido");
+    });
+  }
 }
 
-export function showSearchBar() {
+export function showClientSearchBar() {
   const contenedorList = document.getElementById("contenedorBusqueda");
   const contenedorSearch = document.getElementById("buscarCliente");
 
@@ -79,15 +79,63 @@ export function showSearchBar() {
     });
 
     document.addEventListener("click", function (event) {
-        if (
-          !contenedorList.contains(event.target) && 
-          event.target !== contenedorSearch
-        ) {
-          if (contenedorList.classList.contains("activo")) {
-            contenedorList.classList.remove("activo");
-            contenedorList.classList.add("escondido");
-          }
+      if (
+        !contenedorList.contains(event.target) &&
+        event.target !== contenedorSearch
+      ) {
+        if (contenedorList.classList.contains("activo")) {
+          contenedorList.classList.remove("activo");
+          contenedorList.classList.add("escondido");
         }
-      });
+      }
+    });
+  }
+}
+
+export function showProductSearchBar() {
+  const contenedorListaProductos =
+    document.getElementById("contenedorProducto");
+  const contenedorSearchProducto = document.getElementById("buscarProducto");
+
+  if (contenedorSearchProducto) {
+    contenedorSearchProducto.addEventListener("click", function (event) {
+      event.stopPropagation();
+
+      if (contenedorListaProductos.classList.contains("escondido")) {
+        contenedorListaProductos.classList.remove("escondido");
+        contenedorListaProductos.classList.add("activo");
+      } else {
+        contenedorListaProductos.classList.remove("activo");
+        contenedorListaProductos.classList.add("escondido");
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (
+        !contenedorListaProductos.contains(event.target) &&
+        event.target !== contenedorSearchProducto
+      ) {
+        if (contenedorListaProductos.classList.contains("activo")) {
+          contenedorListaProductos.classList.remove("activo");
+          contenedorListaProductos.classList.add("escondido");
+        }
+      }
+    });
+  }
+}
+
+export function changeTypeDocument() {
+  const tipoComprobante = document.getElementById("tipoComprobante");
+  const checkProforma = document.getElementById("proformaCheck");
+  const originValue = tipoComprobante.value;
+
+  if (checkProforma) {
+    checkProforma.addEventListener("change", () => {
+      if (checkProforma.checked) {
+        tipoComprobante.value = "PROFORMA";
+      } else {
+        tipoComprobante.value = originValue;
+      }
+    });
   }
 }

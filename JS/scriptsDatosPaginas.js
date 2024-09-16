@@ -16,6 +16,11 @@ export const billAppDatosFactura = {
 export const realizarVentaDatos = {
     containerTotal : document.getElementById('contenedorTotal'),
     infoTotal : document.getElementById('informacionComprobante'),
-    contenedorList : document.getElementById('contenedorBusqueda'),
-    contenedorSearch: document.getElementById('buscarCliente')
+    contenedorListaClientes : document.getElementById('contenedorBusqueda'),
+    contenedorSearchCliente: document.getElementById('buscarCliente'),
+    contenedorListaProductos : document.getElementById('contenedorProducto'),
+    contenedorSearchProducto : document.getElementById('buscarProducto'),
+
+    tipoComprobante : document.getElementById('tipoComprobante'),
+    checkProforma : document.getElementById('proformaCheck')
 };
