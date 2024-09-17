@@ -24,3 +24,10 @@ export const realizarVentaDatos = {
     tipoComprobante : document.getElementById('tipoComprobante'),
     checkProforma : document.getElementById('proformaCheck')
 };
+
+export const input = {
+    Plaquita : document.getElementById('placaInput'),
+    OrdenCompraPE : document.getElementById('ordenCompraInput'),
+    ObservacionesPE : document.getElementById('ObservacionesInput'),
+    btnClaseInput : document.getElementsByClassName('buttonClass')
+};

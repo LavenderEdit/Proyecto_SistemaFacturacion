@@ -27,7 +27,7 @@ export function showOptionList() {
       } else {
         billAppDatosFactura.dropdownLista.classList.remove("activo");
         billAppDatosFactura.dropdownLista.classList.add("escondido");
-      }
+      } 
     });
 
     document.addEventListener("click", function (event) {

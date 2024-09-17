@@ -151,8 +151,11 @@
     background-color: lightgray;
     border-top: 2px solid darkgray;
     border-bottom: 2px solid darkgray;
-    /*height: 300px;*/
+    height: 300px;
+    padding: 5px;
     max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* Sección footer del Form */
@@ -378,4 +381,85 @@
 .productos button:hover {
     border-color: rgba(94, 94, 239, 1);
     background-color: rgba(0, 0, 255, 0.2);
+}
+
+/* Contenedor principal del producto */
+.productoBody {
+    display: grid;
+    grid-template-columns: 85% 15%;
+    max-width: 1115px;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: white;
+    margin-bottom: 5px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    align-items: center;
+}
+
+/* Modificar contenedor de la información del producto */
+#contenedorInfoProducto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Alinear el contenido de la infoProducto en dos líneas */
+.infoProducto {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+/* Ajustar la posición del botón de eliminar */
+#deleteProduct {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#increaseDecreaseProduct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+#increaseDecreaseProduct button {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#increaseDecreaseProduct button:hover {
+    background-color: #f0f0f0;
+}
+
+#increaseDecreaseProduct input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 30px;
+}
+
+/* Botón de eliminar producto */
+#deleteProduct button {
+    border-radius: 7px;
+    border: 1px solid gray;
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#deleteProduct button:hover {
+    background-color: lightgray;
+    border: 1px solid gray;
 }

@@ -77,17 +77,155 @@
                 </div>
             </div>
             <div id="formExtras" class="extras">
-                <button type="button" style="background-color: olive;">PLACA</button>
-                <button type="button" style="background-color: chocolate;">ORD. COMPRA</button>
-                <button type="button" style="background-color: brown;">GUI. REMISIÓN</button>
-                <button type="button" style="background-color: cadetblue;">OBSERVACIONES</button>
-                <button type="button" style="background-color: darkcyan;">CONDI. PAGO</button>
-                <button type="button" style="background-color: darkgoldenrod;">OTROS</button>
+                <div>
+                    <button type="button" class="buttonClass" style="background-color: olive;">PLACA</button>
+                    <input type="hidden" id="placaInput" name="placa" placeholder="Ingrese Placa">
+                </div>
+                <div>
+                    <button type="button" class="buttonClass" style="background-color: chocolate;">ORD. COMPRA</button> 
+                    <input type="hidden" id="ordenCompraInput" name="ordCompra" placeholder="Ingrese Orden de Compra">
+                </div>
+                <div>
+                    <button type="button" style="background-color: brown;">GUI. REMISIÓN</button>
+                </div>
+                <div>
+                    <button type="button" class="buttonClass" style="background-color: cadetblue;">OBSERVACIONES</button>
+                    <input type="hidden" id="ObservacionesInput" name="observaciones" placeholder="Ingrese Observaciones">
+                </div>
+                <div>
+                    <button type="button" style="background-color: darkcyan;">CONDI. PAGO</button>
+                </div>
+                <div>
+                    <button type="button" style="background-color: darkgoldenrod;">OTROS</button>
+                </div>
             </div>
         </div>
         <div id="bodyForm">
-            <ol>
-                <li></li>
+            <ol class="contenedorProductosBody">
+                <li class="productoBody">
+                    <div id="ContenedorNombreProducto">
+                        <span class="negrita">PRODUCTO</span>                    
+                    </div>
+                    <div id="increaseDecreaseProduct">
+                        <button type="button">-</button>
+                        <input type="text" readonly value="1">
+                        <button type="button">+</button>
+                    </div>
+                    <div id="contenedorInfoProducto">
+                        <div class="infoProducto">
+                            <span class="negrita">ALMACEN</span>
+                            <span>LUBRICANTES CLAUDIA</span>
+                        </div>
+                        <div class="infoProducto">
+                            <span class="negrita">PRECIO UNIT.</span>
+                            <span>S/. 0.01</span>
+                        </div>
+                        <div class="infoProducto">
+                            <span class="negrita">DESCUENTO</span>
+                            <span>S/. 0.00</span>
+                        </div>
+                        <div class="infoProducto">
+                            <span class="negrita">TOTAL</span>
+                            <span class="negrita">S/. 0.01</span>
+                        </div>
+                    </div>
+                    <div id="deleteProduct">
+                        <button type="submit" class="negrita">ELIMINAR</button>
+                    </div>
+                </li>
+                <li class="productoBody">
+                    <div id="ContenedorNombreProducto">
+                        <span class="negrita">PRODUCTO</span>                    
+                    </div>
+                    <div id="increaseDecreaseProduct">
+                        <button type="button">-</button>
+                        <input type="text" readonly value="1">
+                        <button type="button">+</button>
+                    </div>
+                    <div id="contenedorInfoProducto">
+                        <div class="infoProducto">
+                            <span class="negrita">ALMACEN</span>
+                            <span>LUBRICANTES CLAUDIA</span>
+                        </div>
+                        <div class="infoProducto">
+                            <span class="negrita">PRECIO UNIT.</span>
+                            <span>S/. 0.01</span>
+                        </div>
+                        <div class="infoProducto">
+                            <span class="negrita">DESCUENTO</span>
+                            <span>S/. 0.00</span>
+                        </div>
+                        <div class="infoProducto">
+                            <span class="negrita">TOTAL</span>
+                            <span class="negrita">S/. 0.01</span>
+                        </div>
+                    </div>
+                    <div id="deleteProduct">
+                        <button type="submit" class="negrita">ELIMINAR</button>
+                    </div>
+                </li>
+                <li class="productoBody">
+                    <div id="ContenedorNombreProducto">
+                        <span class="negrita">PRODUCTO</span>                    
+                    </div>
+                    <div id="increaseDecreaseProduct">
+                        <button type="button">-</button>
+                        <input type="text" readonly value="1">
+                        <button type="button">+</button>
+                    </div>
+                    <div id="contenedorInfoProducto">
+                        <div class="infoProducto">
+                            <span class="negrita">ALMACEN</span>
+                            <span>LUBRICANTES CLAUDIA</span>
+                        </div>
+                        <div class="infoProducto">
+                            <span class="negrita">PRECIO UNIT.</span>
+                            <span>S/. 0.01</span>
+                        </div>
+                        <div class="infoProducto">
+                            <span class="negrita">DESCUENTO</span>
+                            <span>S/. 0.00</span>
+                        </div>
+                        <div class="infoProducto">
+                            <span class="negrita">TOTAL</span>
+                            <span class="negrita">S/. 0.01</span>
+                        </div>
+                    </div>
+                    <div id="deleteProduct">
+                        <button type="submit" class="negrita">ELIMINAR</button>
+                    </div>
+                </li>
+                <li class="productoBody">
+                    <div id="ContenedorNombreProducto">
+                        <span class="negrita">PRODUCTO</span>                    
+                    </div>
+                    <div id="increaseDecreaseProduct">
+                        <button type="button">-</button>
+                        <input type="text" readonly value="1">
+                        <button type="button">+</button>
+                    </div>
+                    <div id="contenedorInfoProducto">
+                        <div class="infoProducto">
+                            <span class="negrita">ALMACEN</span>
+                            <span>LUBRICANTES CLAUDIA</span>
+                        </div>
+                        <div class="infoProducto">
+                            <span class="negrita">PRECIO UNIT.</span>
+                            <span>S/. 0.01</span>
+                        </div>
+                        <div class="infoProducto">
+                            <span class="negrita">DESCUENTO</span>
+                            <span>S/. 0.00</span>
+                        </div>
+                        <div class="infoProducto">
+                            <span class="negrita">TOTAL</span>
+                            <span class="negrita">S/. 0.01</span>
+                        </div>
+                    </div>
+                    <div id="deleteProduct">
+                        <button type="submit" class="negrita">ELIMINAR</button>
+                    </div>
+                </li>
             </ol>
         </div>
         <div id="footerForm">
