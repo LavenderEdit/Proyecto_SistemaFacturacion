@@ -56,7 +56,6 @@
 #formOpciones {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Primera fila de 4 columnas */
 }
 
 #BuscadorCliente {
@@ -152,7 +151,8 @@
     background-color: lightgray;
     border-top: 2px solid darkgray;
     border-bottom: 2px solid darkgray;
-    height: 300px;
+    /*height: 300px;*/
+    max-height: 300px;
 }
 
 /* Sección footer del Form */
