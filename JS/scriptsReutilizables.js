@@ -35,7 +35,7 @@ export function showOptionList() {
         !billAppDatosFactura.dropdownLista.contains(event.target) &&
         event.target !== billAppDatosFactura.iconoDatos
       ) {
-        if (billAppDatosFactura.dropdownLista.classList.contains("activo")) {
+        if (billAppDatosFactura.dropdownLista.classList.contains("activo")) { 
           billAppDatosFactura.dropdownLista.classList.remove("activo");
           billAppDatosFactura.dropdownLista.classList.add("escondido");
         }
@@ -138,4 +138,8 @@ export function changeTypeDocument() {
       }
     });
   }
+}
+
+export function changeInputType() {
+  
 }
