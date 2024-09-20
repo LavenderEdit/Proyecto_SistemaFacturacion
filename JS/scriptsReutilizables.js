@@ -27,7 +27,7 @@ export function showOptionList() {
       } else {
         billAppDatosFactura.dropdownLista.classList.remove("activo");
         billAppDatosFactura.dropdownLista.classList.add("escondido");
-      } 
+      }
     });
 
     document.addEventListener("click", function (event) {
@@ -35,7 +35,7 @@ export function showOptionList() {
         !billAppDatosFactura.dropdownLista.contains(event.target) &&
         event.target !== billAppDatosFactura.iconoDatos
       ) {
-        if (billAppDatosFactura.dropdownLista.classList.contains("activo")) { 
+        if (billAppDatosFactura.dropdownLista.classList.contains("activo")) {
           billAppDatosFactura.dropdownLista.classList.remove("activo");
           billAppDatosFactura.dropdownLista.classList.add("escondido");
         }
@@ -141,5 +141,78 @@ export function changeTypeDocument() {
 }
 
 export function changeInputType() {
-  
+  const plaquita = document.getElementById("placaInput");
+  const ordenCompraPE = document.getElementById("ordenCompraInput");
+  const observacionesPE = document.getElementById("ObservacionesInput");
+  const btnClaseInput = document.getElementsByClassName("buttonClass");
+
+  [plaquita, ordenCompraPE, observacionesPE].forEach(input => {
+    input.addEventListener("input", function () {
+      if (input.value.trim() === "") {
+        input.dataset.empty = "true";
+      } else {
+        delete input.dataset.empty;
+      }
+    });
+  });
+
+  for (let i = 0; i < btnClaseInput.length; i++) {
+    btnClaseInput[i].addEventListener("click", function (event) {
+      event.stopPropagation();
+
+      if (btnClaseInput[i].innerText === "PLACA") {
+        plaquita.type = "text";
+      } else if (btnClaseInput[i].innerText === "ORD. COMPRA") {
+        ordenCompraPE.type = "text";
+      } else if (btnClaseInput[i].innerText === "OBSERVACIONES") {
+        observacionesPE.type = "text";
+      }
+    });
+  }
+
+  document.addEventListener("click", function (event) {
+    if (
+      !plaquita.contains(event.target) &&
+      !ordenCompraPE.contains(event.target) &&
+      !observacionesPE.contains(event.target)
+    ) {
+      plaquita.type = "hidden";
+      ordenCompraPE.type = "hidden";
+      observacionesPE.type = "hidden";
+
+      if (plaquita.dataset.empty === "true") {
+        plaquita.value = "";
+      }
+      if (ordenCompraPE.dataset.empty === "true") {
+        ordenCompraPE.value = "";
+      }
+      if (observacionesPE.dataset.empty === "true") {
+        observacionesPE.value = "";
+      }
+    }
+  });
+}
+
+
+export function checkContentInput() {
+  const simbolosCheck = document.getElementsByClassName("symbol");
+  const plaquita = document.getElementById("placaInput");
+  const ordenCompraPE = document.getElementById("ordenCompraInput");
+  const observacionesPE = document.getElementById("ObservacionesInput");
+
+  toggleSymbol(plaquita, simbolosCheck[0]);
+  toggleSymbol(ordenCompraPE, simbolosCheck[1]);
+  toggleSymbol(observacionesPE, simbolosCheck[2]);
+}
+
+function toggleSymbol(inputElement, symbolElement) {
+  inputElement.addEventListener("input", function () {
+    if (inputElement.value.trim() !== "") {
+      symbolElement.classList.remove("escondido");
+      symbolElement.classList.add("activo");
+    } else {
+      symbolElement.classList.remove("activo");
+      symbolElement.classList.add("escondido");
+    }
+  });
 }

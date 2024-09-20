@@ -26,8 +26,9 @@ export const realizarVentaDatos = {
 };
 
 export const input = {
-    Plaquita : document.getElementById('placaInput'),
-    OrdenCompraPE : document.getElementById('ordenCompraInput'),
-    ObservacionesPE : document.getElementById('ObservacionesInput'),
-    btnClaseInput : document.getElementsByClassName('buttonClass')
+    plaquita : document.getElementById('placaInput'),
+    ordenCompraPE : document.getElementById('ordenCompraInput'),
+    observacionesPE : document.getElementById('ObservacionesInput'),
+    btnClaseInput : document.getElementsByClassName('buttonClass'),
+    simboloCheck : document.getElementsByClassName('symbol')
 };

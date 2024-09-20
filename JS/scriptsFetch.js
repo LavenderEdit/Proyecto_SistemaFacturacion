@@ -4,6 +4,8 @@ import {
   showClientSearchBar,
   showProductSearchBar,
   changeTypeDocument,
+  changeInputType,
+  checkContentInput
 } from "./scriptsReutilizables.js";
 import { showModal, setupModalCloseButtons } from "./scriptMensajes.js";
 
@@ -12,6 +14,8 @@ function cargarDatos() {
   showClientSearchBar();
   showProductSearchBar();
   changeTypeDocument();
+  changeInputType();
+  checkContentInput();
 }
 
 function cargarPagina(url) {
