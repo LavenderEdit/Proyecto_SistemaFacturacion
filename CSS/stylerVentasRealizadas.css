@@ -1,77 +1,138 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facturas y Boletas</title>
-    <link rel="stylesheet" href="/CSS/styleVentasRealizadas.css">
-</head>
-<body>
-    <header class="header">
-        <div class="header-content">
-            <div class="title">Martes » 3º Septiembre</div>
-            <div class="calendar">
-                <input type="text" id="calendar-input" class="datepicker">
-                <a class="datepicker-trigger btn">Seleccionar fecha</a>
-            </div>
-        </div>
-    </header>
+styleVentasRealizadas.css:
 
-    <div class="container">
-        <div class="card factura">
-            <div class="card-info">
-                <span> » FF04-3134</span>
-                <span>LUBRICANTES CLAUDIA</span>
-                <span class="date-time">3º Septiembre, 17:43 PM</span>
-            </div>
-            <div class="amount">S/ 691.00</div>
-        </div>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
 
-        <div class="card boleta">
-            <div class="card-info">
-                <span>Boleta de Venta Electrónica » BB04-291</span>
-                <span>LUBRICANTES CLAUDIA</span>
-                <span class="date-time">3º Septiembre, 16:41 PM</span>
-            </div>
-            <div class="amount">S/ 15.00</div>
-        </div>
+        .header {
+            background-color: #002A5E;
+            color: white;
+            padding: 15px;
+            text-align: right;
+            width: 75%; /* Ajuste responsivo */
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+        }
 
-        <div class="card boleta highlight">
-            <div class="card-info">
-                <span>Boleta de Venta Electrónica » BB04-290</span>
-                <span>LUBRICANTES CLAUDIA</span>
-                <span class="date-time">3º Septiembre, 16:36 PM</span>
-            </div>
-            <div class="amount">S/ 15.00</div>
-        </div>
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        <div class="card factura">
-            <div class="card-info">
-                <span>Factura Electrónica » FF04-3133</span>
-                <span>LUBRICANTES CLAUDIA</span>
-                <span class="date-time">3º Septiembre, 16:30 PM</span>
-            </div>
-            <div class="amount">S/ 40.00</div>
-        </div>
+        .title {
+            font-size: 24px;
+            margin: 0;
+        }
 
-        <div class="card factura">
-            <div class="card-info">
-                <span>Factura Electrónica » FF04-3132</span>
-                <span>LUBRICANTES CLAUDIA</span>
-                <span class="date-time">3º Septiembre, 13:59 PM</span>
-            </div>
-            <div class="amount">S/ 430.00</div>
-        </div>
+        .calendar input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: white;
+            color: #333;
+        }
 
-        <div class="card factura">
-            <div class="card-info">
-                <span>Factura Electrónica » FF04-3131</span>
-                <span>LUBRICANTES CLAUDIA</span>
-                <span class="date-time">3º Septiembre, 12:21 PM</span>
-            </div>
-            <div class="amount">S/ 25.00</div>
-        </div>
-    </div>
+        .calendar .datepicker-trigger {
+            margin-left: 10px;
+        }
 
-</body>
-</html>
+        .container {
+            margin-top: 80px; 
+            padding: 20px;
+            max-width: 100%; 
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid #4285f4;
+            min-height: 80px;
+            width: 220%;
+            margin-left: -60%;
+        }
+
+        .card.boleta {
+            border-left: 5px solid #db4437;
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-info span {
+            font-size: 14px;
+        }
+
+        .card-info .date-time {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .amount {
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .highlight {
+            background-color: #f9d5d3;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+
+            .card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .amount {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 18px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .card-info span {
+                font-size: 12px;
+            }
+
+            .amount {
+                font-size: 18px;
+            }
+        }
