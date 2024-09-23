@@ -10,6 +10,7 @@
 
 /* Imports Paginas */
 @import url('./styleRealizarVenta.css');
+@import url('./styleVentasRealizadas.css');
 
 body {
     background-color: #D3D3D3;

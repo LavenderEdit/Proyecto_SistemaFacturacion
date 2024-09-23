@@ -1,0 +1,101 @@
+#contenedorVentas {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+}
+
+.header {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+
+.header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-right: auto;
+}
+
+.header .calendar {
+    display: flex;
+    align-items: center;
+}
+
+#calendar-input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.datepicker-trigger {
+    background-color: #3f51b5;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.datepicker-trigger:hover {
+    background-color: #303f9f;
+}
+
+/* Estilo para las tarjetas de ventas (factura/boleta) */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 85vh;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info span {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.card-info .date-time {
+    font-size: 12px;
+    color: #999;
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.factura .amount {
+    color: #4caf50;
+}
+
+.boleta .amount {
+    color: #f44336;
+}
+

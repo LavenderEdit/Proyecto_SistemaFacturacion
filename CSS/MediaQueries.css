@@ -217,3 +217,53 @@
         font-size: 15px;
     }
 }
+
+
+/* 
+    Jordan's media queries: Still not useful since it's a really low width for the page, just fit for phone, which is not the objective
+    Notes:
+    - Fix it up to be able to fit the content-bar
+    - Make the list able to go down without getting broken on the way 
+*/
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .amount {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card-info span {
+        font-size: 12px;
+    }
+
+    .amount {
+        font-size: 18px;
+    }
+}
