@@ -5,7 +5,7 @@
     padding: 10px; /* Reduce el relleno para ahorrar espacio */
     border: 1px solid #ddd; /* Borde */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    font-size: 10px; /* Reduce el tamaño de la fuente para que quepa en A4 */
+    font-size: 10px;  /* Reduce el tamaño de la fuente para que quepa en A4 */
 }
 
 .proforma {
