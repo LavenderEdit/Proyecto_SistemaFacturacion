@@ -1,0 +1,46 @@
+// scriptpdf.js
+async function generatePDF() {
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({
+        orientation: "portrait",
+        unit: "mm",
+        format: "a4",
+        putOnlyUsedFonts: true,
+        floatPrecision: 16
+    });
+
+    const invoiceContent = document.getElementById('invoice');
+
+    // Usar html2canvas para capturar el contenido
+    const canvas = await html2canvas(invoiceContent, {
+        scale: 2 // Escala mejorada para mayor calidad
+    });
+
+    const imgData = canvas.toDataURL('image/png');
+    const imgWidth = 210; // Ancho de A4
+    const pageHeight = 295; // Alto de A4
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    let heightLeft = imgHeight;
+
+    let position = 0;
+
+    // Agregar la imagen al PDF
+    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+    heightLeft -= pageHeight;
+
+    // Agregar nuevas páginas si es necesario
+    while (heightLeft >= 0) {
+        position = heightLeft - imgHeight;
+        pdf.addPage();
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+    }
+
+    // Previsualizar el PDF en una nueva ventana
+    const blob = pdf.output('blob');
+    const url = URL.createObjectURL(blob);
+    window.open(url);
+}
+
+// exportacion de la función de módulos
+export { generatePDF };
