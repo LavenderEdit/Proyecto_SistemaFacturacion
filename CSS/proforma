@@ -1,1 +1,147 @@
+.invoice {
+    max-width: 800px; /* Mantiene el ancho máximo */
+    margin: auto; /* Centra el contenido */
+    background-color: #fff; /* Fondo blanco */
+    padding: 10px; /* Reduce el relleno para ahorrar espacio */
+    border: 1px solid #ddd; /* Borde */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    font-size: 10px; /* Reduce el tamaño de la fuente para que quepa en A4 */
+}
+
+.proforma {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 26px;
+    margin: 0;
+    color: #003366;
+}
+
+header .header-left {
+    text-align: left;
+}
+
+header .header-right {
+    text-align: right;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #003366;
+    padding: 10px;
+}
+
+.shipping-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.shipping-info div {
+    width: 30%;
+}
+
+h3 {
+    color: #003366;
+    margin: 0;
+    font-size: 16px;
+}
+
+.items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.items th, .items td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.items th {
+    background-color: #003366;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.items td {
+    font-size: 14px;
+}
+
+.totals {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.totals p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #003366;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.payment-conditions {
+    border-top: 2px solid #eee;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer h2 {
+    color: #003366;
+    font-size: 24px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.pdf-button {
+    text-align: center;
+    margin-top: 40px; /* Ajusta esta propiedad para añadir espacio entre la factura y el botón */
+}
+
+.pdf-button button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pdf-button button:hover {
+    background-color: #002244;
+}
+
+.pdf-icon {
+    font-size: 20px;
+}
+
 
