@@ -1,0 +1,103 @@
+<div>
+    <div class="invoice" id="invoice">
+        <header class="proforma">
+            <div class="header-left">
+                <h1>FACTURA PROFORMA</h1>
+                <p>
+                    PIMENTEL CRUZ, JUAN SANTOS<br>
+                    Av. Tomás Valle<br>
+                    RUC Nº 10073773445
+                </p>
+            </div>
+            <div class="header-right">
+                <div class="logo">Wolf's Fur</div>
+            </div>
+        </header>
+
+        <section class="shipping-info">
+            <div class="sent-to">
+                <h3>ENVIADO A</h3>
+                <p>
+                    PIMENTEL CRUZ, JUAN SANTOS<br>
+                    Av. Tomás Valle<br>
+                    
+                </p>
+            </div>
+            <div class="ship-to">
+                <h3>ENVIAR A</h3>
+                <p>
+                    PIMENTEL CRUZ, JUAN SANTOS<br>
+                    Av. Tomás Valle<br>
+                    
+                </p>
+            </div>
+            <div class="invoice-details">
+                <p><strong>Nº de Factura:</strong> 85-001</p>
+                <p><strong>Fecha:</strong> 25/09/2024</p>
+                <p><strong>Nº de Pedido:</strong> 120319</p>
+                <p><strong>Fecha de Vencimiento:</strong> 25/10/2024</p>
+            </div>
+        </section>
+
+        <table class="items" id="items-table">
+            <thead>
+                <tr>
+                    <th>CANT.</th>
+                    <th>DESCRIPCIÓN</th>
+                    <th>PRECIO UNITARIO</th>
+                    <th>IMPORTE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Filtro de aceite</td>
+                    <td>100.00</td>
+                    <td>100.00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Refrigerante</td>
+                    <td>25.00</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Aceite de motor</td>
+                    <td>30.00</td>
+                    <td>25.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="totals">
+            <p><strong>Subtotal:</strong> 165.00</p>
+            <p><strong>IGV 21.00%:</strong> 34.65</p>
+            <p class="total"><strong>TOTAL:</strong> S/ 199.65</p>
+        </div>
+
+        <section class="signature">
+            <p>Juan Santos</p>
+        </section>
+
+        <section class="payment-conditions">
+            <h3>CONDICIONES Y FORMA DE PAGO</h3>
+            <p>El pago se realizará en un plazo de 15 días</p>
+            <p>
+                Banco <br><br>
+                SWIFT/BIC: ABCDESMMXXX
+            </p>
+        </section>
+
+        <footer>
+            <h2>Gracias</h2>
+        </footer>
+    </div>
+
+    <div class="pdf-button">
+        <button onclick="generatePDF()">
+            <i class="fa-solid fa-file-pdf"></i> Descargar PDF
+        </button>
+    </div>
+</div>
+
