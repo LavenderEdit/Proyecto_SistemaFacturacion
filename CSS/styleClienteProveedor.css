@@ -1,0 +1,75 @@
+#contenedorClienteProveedor {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box; /* Para incluir el padding en el ancho/alto total */
+}
+
+.header {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Para darle un pequeño sombreado */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-right: auto;
+}
+
+/* Estilos para el contenedor */
+.registrar-nuevo-contenedor {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    padding: 20px; /* Espacio alrededor del botón */
+}
+
+/* Estilos del botón */
+.btn-registrar-nuevo {
+    background-color: #002A5E; /* Fondo azul más vibrante */
+    color: white; /* Texto en blanco */
+    padding: 5px 10px; /* Más espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes más redondeados */
+    font-size: 15px; /* Tamaño del texto más grande */
+    font-weight: 600; /* Texto en seminegrita */
+    cursor: pointer; /* Cambia el cursor a puntero */
+    display: flex; /* Alinea el texto y los puntos verticales en fila */
+    align-items: center; /* Centra verticalmente el contenido */
+    gap: 20px; /* Espacio más amplio entre el texto y los puntos */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    transition: background-color 0.3s ease; /* Transición suave al hacer hover */
+}
+
+/* Estilo del botón al pasar el ratón por encima */
+.btn-registrar-nuevo:hover {
+    background-color: #1565c0; /* Color más oscuro al hacer hover */
+}
+
+/* Estilo de los tres puntos verticales */
+.three-dots {
+    font-size: 22px; /* Tamaño de los puntos verticales */
+    display: inline-block;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.search-input {
+    width: 250px; /* Ajusta el ancho del campo de búsqueda */
+    padding: 10px;
+    border: 1px solid #ccc;
