@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/Modales.css" />
+    <title>Modal</title>
+</head>
+
+<body>
+    <div class="modalOne" id="modalUno">
+        <form>
+            <!-- PRODUCTO -->
+            <div id="producto">
+                <label for="producto" id="sinNombre">NOMBRE</label>
+                <div>
+                    <input type="text" id="producto" placeholder="PRODUCTO" />
+                    <button type="button" class="edit-btn negrita" title="Editar">✎</button>
+                </div>
+            </div>
+
+            <!-- ALMACEN SALIDA -->
+            <div id="almacenSalida">
+                <label for="almacenSalida">ALMACEN SALIDA</label>
+                <select id="almacenSalida">
+                    <option value="lubricantes">TIENDITAS PE PERRAS</option>
+                    <option value="lubricantes">ME VENGOOOO</option>
+                    <option value="lubricantes">PENE CON CACA</option>
+                </select>
+            </div>
+
+            <!-- PRECIO UNITARIO -->
+            <div id="precioUnitario">
+                <label for="precioUnitario">PRECIO UNITARIO</label>
+                <div>
+                    <input type="text" id="precioUnitario" placeholder="S/0.00" />
+                    <button type="button" title="Editar">ICONO</button>
+                </div>
+            </div>
+
+            <!-- CANTIDAD-->
+            <div id="cantidad">
+                <label for="cantidad">CANTIDAD</label>
+                <div>
+                    <button type="button">-</button>
+                    <input type="number" id="cantidad" value="1" />
+                    <button type="button">+</button>
+                    <button type="button" title="Calculadora">ICONO</button>
+                </div>
+            </div>
+
+            <!-- DESCUENTO -->
+            <div id="descuento">
+                <label for="descuento" style="margin-right: 10px">DESCUENTO</label>
+                <input type="checkbox" id="descuento" />
+                <label for="descuento">%</label>
+            </div>
+
+            <!-- DETALLE ADICIONAL -->
+            <div id="detalleAdicional">
+                <label for="detalleAdicional">DETALLE ADICIONAL</label>
+                <textarea id="detalleAdicional" rows="3"></textarea>
+            </div>
+
+            <!-- TOTAL -->
+            <div id="total">
+                <strong>Total: </strong>
+                <span>S/ 0.00</span>
+            </div>
+
+            <!-- GUARDAR -->
+            <div id="guardar">
+                <button type="submit">Guardar</button>
+            </div>
+        </form>
+    </div>
+
+    <br></br>
+
+    <div class="modalTwo" id="modalDos">
+        <div class="modal-header">
+            <div class="header-title">
+                <h2>Cliente / Proveedor</h2>
+                <button class="close-btn">X</button>
+            </div>
+            <div class="header-tabs">
+                <ul class="tabs">
+                    <li class="tab active-tab">INFORMACIÓN</li>
+                    <li class="tab">VENTAS</li>
+                    <li class="tab">PROFORMAS</li>
+                    <li class="tab">GUÍAS DE REMISIÓN</li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="form">
+                <div class="form-group">
+                    <label for="tipoDocumento">Tipo de documento</label>
+                    <select id="tipoDocumento">
+                        <option value="ruc">RUC</option>
+                        <option value="dni">DNI</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="numeroDocumento">Número de documento</label>
+                    <input type="text" id="numeroDocumento" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="nombreRazonSocial">Nombre o razón social</label>
+                    <input type="text" id="nombreRazonSocial" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" id="telefono" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" />
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección principal</label>
+                    <textarea id="direccion" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="observaciones">Observaciones adicionales</label>
+                    <textarea id="observaciones" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="cancel-btn">Cancelar</button>
+            <button class="save-btn">Guardar</button>
+        </div>
+    </div>
+
+    <br></br>
+
+    <div class="modalThree" id="modalTres">
+        <div class="modal-header">
+            <div class="header-title">
+                <h2>Comprobante Electronico</h2>
+                <button type="button" class="close-btn" title="Cerrar">X</button>
+            </div>
+        </div>
+        <div class="content">
+            <!-- FACTURA ELECTRONICA -->
+            <div id="facturaElectronica">
+                <span>FACTURA ELECTRONICA</span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- CLIENTE -->
+            <div id="cliente">
+                <span>CLIENTE</span>
+                <p></p>
+                <p></p>
+            </div>
+
+            <!-- USUARIO -->
+            <div id="usuario">
+                <span>USUARIO</span>
+                <p></p>
+                <p></p>
+            </div>
+
+            <!-- ESTADO SUNAT -->
+            <div id="estadoSunat">
+                <span>ESTADO SUNAT</span>
+                <p></p>
+            </div>
+
+            <!-- BOTONES -->
+            <div id="botones">
+                <button type="button">ENVIAR POR EMAIL</button>
+                <button type="button">VISUALIZAR PDF</button>
+                <button type="button">ENVIAR POR WHATSAPP</button>
+                <button type="button">DESCARGAR PDF</button>
+                <button type="button">IMPRIMIR</button>
+                <button type="button">GUIA DE REMISIÓN</button>
+                <button type="button">NOTA DE CRÉDITO</button>
+                <button type="button">NOTA DE DÉBITO</button>
+                <button type="button">DESCARGAR XML</button>
+                <button type="button">DESCARGAR CDR</button>
+                <button type="button">DAR DE BAJA (ANULAR)</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

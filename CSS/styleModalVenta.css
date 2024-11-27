@@ -1,0 +1,14 @@
+/* Modal 2 */
+#modalTres {
+    width: 500px;
+    min-height: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    position: relative;
+    overflow: hidden;
+    max-height: 100vh;
+  }

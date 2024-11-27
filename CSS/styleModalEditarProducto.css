@@ -1,0 +1,15 @@
+/*Modal 1*/
+.modalOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 400px;
+  margin: 50px auto;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}

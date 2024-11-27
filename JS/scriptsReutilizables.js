@@ -1,218 +1,302 @@
-import { signInDatos, billAppDatosFactura } from "./scriptsDatosPaginas.js";
+import { signInDatos, billAppDatosFactura } from './scriptsDatosPaginas.js';
+import { showModal } from './scriptMensajes.js';
 
 export function togglePassword() {
-  if (signInDatos.btnMostrarContra && signInDatos.inputContra) {
-    signInDatos.btnMostrarContra.addEventListener("click", function () {
-      if (signInDatos.inputContra.type === "password") {
-        signInDatos.inputContra.type = "text";
-        signInDatos.iconoOjoAbierto.style.display = "none";
-        signInDatos.iconoOjoCerrado.style.display = "block";
-      } else {
-        signInDatos.inputContra.type = "password";
-        signInDatos.iconoOjoAbierto.style.display = "block";
-        signInDatos.iconoOjoCerrado.style.display = "none";
-      }
-    });
-  }
+    if (signInDatos.btnMostrarContra && signInDatos.inputContra) {
+        signInDatos.btnMostrarContra.addEventListener("click", function () {
+            if (signInDatos.inputContra.type === "password") {
+                signInDatos.inputContra.type = "text";
+                signInDatos.iconoOjoAbierto.style.display = "none";
+                signInDatos.iconoOjoCerrado.style.display = "block";
+            } else {
+                signInDatos.inputContra.type = "password";
+                signInDatos.iconoOjoAbierto.style.display = "block";
+                signInDatos.iconoOjoCerrado.style.display = "none";
+            }
+        });
+    }
+}
+
+export function checkInputToAsignCustomer(clienteInput) {
+    if (/^[a-zA-Z\s]+$/.test(clienteInput)) {
+        return "PUBLICO EN GENERAL CON NOMBRE";
+    } else if (/^\d{8}$/.test(clienteInput)) {
+        return "DNI";
+    } else if (/^\d{11}$/.test(clienteInput)) {
+        return "RUC";
+    } else {
+        return null;
+    }
 }
 
 export function showOptionList() {
-  if (billAppDatosFactura.iconoDatos) {
-    billAppDatosFactura.iconoDatos.addEventListener("click", function (event) {
-      event.stopPropagation();
+    if (billAppDatosFactura.iconoDatos) {
+        billAppDatosFactura.iconoDatos.addEventListener("click", function (event) {
+            event.stopPropagation();
 
-      if (billAppDatosFactura.dropdownLista.classList.contains("escondido")) {
-        billAppDatosFactura.dropdownLista.classList.remove("escondido");
-        billAppDatosFactura.dropdownLista.classList.add("activo");
-      } else {
-        billAppDatosFactura.dropdownLista.classList.remove("activo");
-        billAppDatosFactura.dropdownLista.classList.add("escondido");
-      }
-    });
+            if (billAppDatosFactura.dropdownLista.classList.contains("escondido")) {
+                billAppDatosFactura.dropdownLista.classList.remove("escondido");
+                billAppDatosFactura.dropdownLista.classList.add("activo");
+            } else {
+                billAppDatosFactura.dropdownLista.classList.remove("activo");
+                billAppDatosFactura.dropdownLista.classList.add("escondido");
+            }
+        });
 
-    document.addEventListener("click", function (event) {
-      if (
-        !billAppDatosFactura.dropdownLista.contains(event.target) &&
-        event.target !== billAppDatosFactura.iconoDatos
-      ) {
-        if (billAppDatosFactura.dropdownLista.classList.contains("activo")) {
-          billAppDatosFactura.dropdownLista.classList.remove("activo");
-          billAppDatosFactura.dropdownLista.classList.add("escondido");
-        }
-      }
-    });
-  }
+        document.addEventListener("click", function (event) {
+            if (
+                    !billAppDatosFactura.dropdownLista.contains(event.target) &&
+                    event.target !== billAppDatosFactura.iconoDatos
+                    ) {
+                if (billAppDatosFactura.dropdownLista.classList.contains("activo")) {
+                    billAppDatosFactura.dropdownLista.classList.remove("activo");
+                    billAppDatosFactura.dropdownLista.classList.add("escondido");
+                }
+            }
+        });
+    }
 }
 
 export function showInfoTotal() {
-  const containerTotal = document.getElementById("contenedorTotal");
-  const infoTotal = document.getElementById("informacionComprobante");
+    const containerTotal = document.getElementById("contenedorTotal");
+    const infoTotal = document.getElementById("informacionComprobante");
 
-  if (containerTotal) {
-    containerTotal.addEventListener("mouseenter", function () {
-      infoTotal.classList.remove("escondido");
-      infoTotal.classList.add("activo");
-    });
+    if (containerTotal) {
+        containerTotal.addEventListener("mouseenter", function () {
+            infoTotal.classList.remove("escondido");
+            infoTotal.classList.add("activo");
+        });
 
-    containerTotal.addEventListener("mouseleave", function () {
-      infoTotal.classList.remove("activo");
-      infoTotal.classList.add("escondido");
-    });
-  }
-}
-
-export function showClientSearchBar() {
-  const contenedorList = document.getElementById("contenedorBusqueda");
-  const contenedorSearch = document.getElementById("buscarCliente");
-
-  if (contenedorSearch) {
-    contenedorSearch.addEventListener("click", function (event) {
-      event.stopPropagation();
-
-      if (contenedorList.classList.contains("escondido")) {
-        contenedorList.classList.remove("escondido");
-        contenedorList.classList.add("activo");
-      } else {
-        contenedorList.classList.remove("activo");
-        contenedorList.classList.add("escondido");
-      }
-    });
-
-    document.addEventListener("click", function (event) {
-      if (
-        !contenedorList.contains(event.target) &&
-        event.target !== contenedorSearch
-      ) {
-        if (contenedorList.classList.contains("activo")) {
-          contenedorList.classList.remove("activo");
-          contenedorList.classList.add("escondido");
-        }
-      }
-    });
-  }
+        containerTotal.addEventListener("mouseleave", function () {
+            infoTotal.classList.remove("activo");
+            infoTotal.classList.add("escondido");
+        });
+    }
 }
 
 export function showProductSearchBar() {
-  const contenedorListaProductos =
-    document.getElementById("contenedorProducto");
-  const contenedorSearchProducto = document.getElementById("buscarProducto");
+    const contenedorListaProductos =
+            document.getElementById("contenedorProducto");
+    const contenedorSearchProducto = document.getElementById("buscarProducto");
 
-  if (contenedorSearchProducto) {
-    contenedorSearchProducto.addEventListener("click", function (event) {
-      event.stopPropagation();
+    if (contenedorSearchProducto) {
+        contenedorSearchProducto.addEventListener("click", function (event) {
+            event.stopPropagation();
 
-      if (contenedorListaProductos.classList.contains("escondido")) {
-        contenedorListaProductos.classList.remove("escondido");
-        contenedorListaProductos.classList.add("activo");
-      } else {
-        contenedorListaProductos.classList.remove("activo");
-        contenedorListaProductos.classList.add("escondido");
-      }
+            if (contenedorListaProductos.classList.contains("escondido")) {
+                contenedorListaProductos.classList.remove("escondido");
+                contenedorListaProductos.classList.add("activo");
+            } else {
+                contenedorListaProductos.classList.remove("activo");
+                contenedorListaProductos.classList.add("escondido");
+            }
+        });
+
+        document.addEventListener("click", function (event) {
+            if (
+                    !contenedorListaProductos.contains(event.target) &&
+                    event.target !== contenedorSearchProducto
+                    ) {
+                if (contenedorListaProductos.classList.contains("activo")) {
+                    contenedorListaProductos.classList.remove("activo");
+                    contenedorListaProductos.classList.add("escondido");
+                }
+            }
+        });
+    }
+}
+
+
+// Función para manejar cambios de tipo de comprobante
+export function changeTypeDocument(tipoCliente) {
+    const tipoComprobante = document.getElementById("tipoComprobante");
+    const checkProforma = document.getElementById("proformaCheck");
+    const clienteInput = document.getElementById("clienteInput");
+
+    tipoComprobante.value = "BOLETA DE VENTA ELECTRÓNICA";
+
+    if (tipoCliente) {
+        actualizarTipoComprobante(tipoCliente, checkProforma.checked, tipoComprobante);
+    }
+
+    if (checkProforma) {
+        checkProforma.addEventListener("change", () => {
+            if (checkProforma.checked) {
+                tipoComprobante.value = "PROFORMA ELECTRÓNICA";
+            } else {
+                tipoComprobante.value = "BOLETA DE VENTA ELECTRÓNICA";
+            }
+            console.log(`Tipo de comprobante actualizado por Proforma: ${tipoComprobante.value}`);
+        });
+    }
+
+    if (clienteInput) {
+        clienteInput.addEventListener("input", () => {
+            const inputValue = clienteInput.value.trim();
+            const inputType = checkInputToAsignCustomer(inputValue);
+
+            console.log(`Tipo de cliente detectado: ${inputType}`);
+
+            if (inputValue === "") {
+                tipoComprobante.value = "BOLETA DE VENTA ELECTRÓNICA";
+                console.log("Campo de cliente vacío. Restablecido a BOLETA DE VENTA ELECTRÓNICA.");
+            } else {
+                actualizarTipoComprobante(inputType, checkProforma.checked, tipoComprobante);
+            }
+        });
+    }
+}
+
+// Función auxiliar para actualizar el tipo de comprobante
+export function actualizarTipoComprobante(tipoCliente, isProformaChecked, tipoComprobante) {
+    if (tipoCliente === "DNI") {
+        tipoComprobante.value = isProformaChecked ? "PROFORMA ELECTRÓNICA" : "BOLETA DE VENTA ELECTRÓNICA";
+    } else if (tipoCliente === "RUC") {
+        tipoComprobante.value = "FACTURA ELECTRÓNICA";
+    } else if (!isProformaChecked) {
+        tipoComprobante.value = "BOLETA DE VENTA ELECTRÓNICA";
+    }
+
+    console.log(`Tipo de comprobante actualizado: ${tipoComprobante.value}`);
+}
+
+
+/* Se encarga de los botones de la factura para ser llenados */
+export function changeInputType() {
+    const plaquita = document.getElementById("placaInput");
+    const ordenCompraPE = document.getElementById("ordenCompraInput");
+    const observacionesPE = document.getElementById("ObservacionesInput");
+    const btnClaseInput = document.getElementsByClassName("buttonClass");
+
+    [plaquita, ordenCompraPE, observacionesPE].forEach(input => {
+        input.addEventListener("input", function () {
+            if (input.value.trim() === "") {
+                input.dataset.empty = "true";
+            } else {
+                delete input.dataset.empty;
+            }
+        });
     });
+
+    for (let i = 0; i < btnClaseInput.length; i++) {
+        btnClaseInput[i].addEventListener("click", function (event) {
+            event.stopPropagation();
+
+            if (btnClaseInput[i].innerText === "PLACA") {
+                plaquita.type = "text";
+            } else if (btnClaseInput[i].innerText === "ORD. COMPRA") {
+                ordenCompraPE.type = "text";
+            } else if (btnClaseInput[i].innerText === "OBSERVACIONES") {
+                observacionesPE.type = "text";
+            }
+        });
+    }
 
     document.addEventListener("click", function (event) {
-      if (
-        !contenedorListaProductos.contains(event.target) &&
-        event.target !== contenedorSearchProducto
-      ) {
-        if (contenedorListaProductos.classList.contains("activo")) {
-          contenedorListaProductos.classList.remove("activo");
-          contenedorListaProductos.classList.add("escondido");
+        if (
+                !plaquita.contains(event.target) &&
+                !ordenCompraPE.contains(event.target) &&
+                !observacionesPE.contains(event.target)
+                ) {
+            plaquita.type = "hidden";
+            ordenCompraPE.type = "hidden";
+            observacionesPE.type = "hidden";
+
+            if (plaquita.dataset.empty === "true") {
+                plaquita.value = "";
+            }
+            if (ordenCompraPE.dataset.empty === "true") {
+                ordenCompraPE.value = "";
+            }
+            if (observacionesPE.dataset.empty === "true") {
+                observacionesPE.value = "";
+            }
         }
-      }
     });
-  }
 }
 
-export function changeTypeDocument() {
-  const tipoComprobante = document.getElementById("tipoComprobante");
-  const checkProforma = document.getElementById("proformaCheck");
-  const originValue = tipoComprobante.value;
+export function seleccionarCliente(item) {
+    const clienteSearchBar = document.getElementById('buscarCliente');
+    const contenedorBusqueda = document.getElementById('contenedorBusqueda');
+    const tipoComprobante = document.getElementById('tipoComprobante');
 
-  if (checkProforma) {
-    checkProforma.addEventListener("change", () => {
-      if (checkProforma.checked) {
-        tipoComprobante.value = "PROFORMA";
-      } else {
-        tipoComprobante.value = originValue;
-      }
-    });
-  }
-}
+    const id = item.getAttribute('data-id');
+    const nombre = item.getAttribute('data-nombre');
 
-export function changeInputType() {
-  const plaquita = document.getElementById("placaInput");
-  const ordenCompraPE = document.getElementById("ordenCompraInput");
-  const observacionesPE = document.getElementById("ObservacionesInput");
-  const btnClaseInput = document.getElementsByClassName("buttonClass");
+    clienteSearchBar.value = `${id} >> ${nombre}`;
+    clienteSearchBar.classList.add("seleccionado");
 
-  [plaquita, ordenCompraPE, observacionesPE].forEach(input => {
-    input.addEventListener("input", function () {
-      if (input.value.trim() === "") {
-        input.dataset.empty = "true";
-      } else {
-        delete input.dataset.empty;
-      }
-    });
-  });
+    const tipoCliente = checkInputToAsignCustomer(id);
 
-  for (let i = 0; i < btnClaseInput.length; i++) {
-    btnClaseInput[i].addEventListener("click", function (event) {
-      event.stopPropagation();
+    actualizarTipoComprobante(tipoCliente, false, tipoComprobante);
 
-      if (btnClaseInput[i].innerText === "PLACA") {
-        plaquita.type = "text";
-      } else if (btnClaseInput[i].innerText === "ORD. COMPRA") {
-        ordenCompraPE.type = "text";
-      } else if (btnClaseInput[i].innerText === "OBSERVACIONES") {
-        observacionesPE.type = "text";
-      }
-    });
-  }
+    contenedorBusqueda.classList.add('escondido');
+    contenedorBusqueda.classList.remove("activo-resultados");
 
-  document.addEventListener("click", function (event) {
-    if (
-      !plaquita.contains(event.target) &&
-      !ordenCompraPE.contains(event.target) &&
-      !observacionesPE.contains(event.target)
-    ) {
-      plaquita.type = "hidden";
-      ordenCompraPE.type = "hidden";
-      observacionesPE.type = "hidden";
-
-      if (plaquita.dataset.empty === "true") {
-        plaquita.value = "";
-      }
-      if (ordenCompraPE.dataset.empty === "true") {
-        ordenCompraPE.value = "";
-      }
-      if (observacionesPE.dataset.empty === "true") {
-        observacionesPE.value = "";
-      }
-    }
-  });
+    console.log(`Cliente seleccionado: ${nombre} con ID: ${id}`);
+    console.log(`Tipo de cliente detectado: ${tipoCliente}`);
+    console.log(`Tipo de comprobante ajustado a: ${tipoComprobante.value}`);
 }
 
 
 export function checkContentInput() {
-  const simbolosCheck = document.getElementsByClassName("symbol");
-  const plaquita = document.getElementById("placaInput");
-  const ordenCompraPE = document.getElementById("ordenCompraInput");
-  const observacionesPE = document.getElementById("ObservacionesInput");
+    const simbolosCheck = document.getElementsByClassName("symbol");
+    const plaquita = document.getElementById("placaInput");
+    const ordenCompraPE = document.getElementById("ordenCompraInput");
+    const observacionesPE = document.getElementById("ObservacionesInput");
 
-  toggleSymbol(plaquita, simbolosCheck[0]);
-  toggleSymbol(ordenCompraPE, simbolosCheck[1]);
-  toggleSymbol(observacionesPE, simbolosCheck[2]);
+    toggleSymbol(plaquita, simbolosCheck[0]);
+    toggleSymbol(ordenCompraPE, simbolosCheck[1]);
+    toggleSymbol(observacionesPE, simbolosCheck[2]);
 }
 
+
 function toggleSymbol(inputElement, symbolElement) {
-  inputElement.addEventListener("input", function () {
-    if (inputElement.value.trim() !== "") {
-      symbolElement.classList.remove("escondido");
-      symbolElement.classList.add("activo");
-    } else {
-      symbolElement.classList.remove("activo");
-      symbolElement.classList.add("escondido");
+    inputElement.addEventListener("input", function () {
+        if (inputElement.value.trim() !== "") {
+            symbolElement.classList.remove("escondido");
+            symbolElement.classList.add("activo");
+        } else {
+            symbolElement.classList.remove("activo");
+            symbolElement.classList.add("escondido");
+        }
+    });
+}
+
+
+export function setFechaEmision() {
+    const fechaEmisionInput = document.getElementById('fecEmision');
+
+    fechaEmisionInput.value = obtenerFechaActual();
+
+    fechaEmisionInput.addEventListener('change', function () {
+        if (validarCambioFecha(fechaEmisionInput)) {
+            showModal('successModal', "La fecha elegida es aceptable.");
+        } else {
+            fechaEmisionInput.value = obtenerFechaActual();
+        }
+    });
+}
+
+function obtenerFechaActual() {
+    const fecha = new Date();
+    const año = fecha.getFullYear();
+    const mes = String(fecha.getMonth() + 1).padStart(2, '0');
+    const dia = String(fecha.getDate()).padStart(2, '0');
+    return `${año}-${mes}-${dia}`;
+}
+
+function validarCambioFecha(fechaEmisionInput) {
+    const fechaSeleccionada = new Date(fechaEmisionInput.value);
+    const fechaActual = new Date();
+    const tresDiasAntes = new Date(fechaActual);
+    tresDiasAntes.setDate(fechaActual.getDate() - 3);
+    const tresDiasDespues = new Date(fechaActual);
+    tresDiasDespues.setDate(fechaActual.getDate() + 3);
+
+    if (fechaSeleccionada < tresDiasAntes || fechaSeleccionada > tresDiasDespues) {
+        showModal('warningModal', "No puedes elegir una fecha de tres dias anteriores o posteriores a la actual.");
+        return false;
     }
-  });
+    return true;
 }
