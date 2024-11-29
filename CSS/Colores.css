@@ -5,3 +5,12 @@
 .grisPuro {
     color: gray;
 }
+
+.rojoBotonFondo {
+    background-color: #E53935 !important;
+    transition: all 0.3s ease-in;
+}
+
+.rojoBotonFondo:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
+}

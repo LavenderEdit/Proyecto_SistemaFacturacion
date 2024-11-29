@@ -52,10 +52,10 @@
             <div class="form-group labelBonito">
                 <label for="descuento" class="lblStyleGlobalModal">DESCUENTO</label>
                 <div class="wrapper discount-wrapper">
-                    <input type="text" id="descuento" class="inptStyleGlobalModal" value="0.00"/>
+                    <input type="text" id="descuento" class="inptStyleGlobalModal" value="0.00" />
                     <span class="percentage">%</span>
                 </div>
-            </div>            
+            </div>
 
             <div id="total" class="totalStyleGlobalModal sinCopiar">
                 <span class="negrita">TOTAL >> </span>
@@ -64,7 +64,7 @@
 
             <!-- Botón de guardar -->
             <div class="form-group span-2" id="guardar">
-                <button type="submit" class="btnStyleModalGlobal">GUARDAR</button>
+                <button type="submit" class="btnStyleModalGlobal">Guardar</button>
             </div>
         </form>
     </div>
@@ -135,45 +135,46 @@
         </div>
         <div class="content">
             <!-- FACTURA ELECTRONICA -->
-            <div id="facturaElectronica">
-                <span>FACTURA ELECTRONICA</span>
-                <span></span>
-                <span></span>
+            <div id="facturaElectronica" class="fondo-content">
+                <span class="negrita">FACTURA ELECTRONICA</span>
+                <span>FF04-3506</span>
+                <span class="negrita">S/ 293.00</span>
             </div>
 
-            <!-- CLIENTE -->
-            <div id="cliente">
-                <span>CLIENTE</span>
-                <p></p>
-                <p></p>
-            </div>
+            <div id="informacionFactura" class="fondo-content">
+                <!-- CLIENTE -->
+                <div id="cliente">
+                    <span>CLIENTE</span>
+                    <span>TRANSPORTES ROMA CARGO SAC</span>
+                    <span>RUC 20608881990</span>
+                </div>
 
-            <!-- USUARIO -->
-            <div id="usuario">
-                <span>USUARIO</span>
-                <p></p>
-                <p></p>
-            </div>
+                <!-- USUARIO -->
+                <div id="usuario">
+                    <span>USUARIO</span>
+                    <span>JUAN SANTOS PIMENTEL</span>
+                    <span>27/11/2024 10:00 AM</span>
+                </div>
 
-            <!-- ESTADO SUNAT -->
-            <div id="estadoSunat">
-                <span>ESTADO SUNAT</span>
-                <p></p>
+                <!-- ESTADO SUNAT -->
+                <div id="estadoSunat">
+                    <span>ESTADO SUNAT</span>
+                    <span>ACEPTADO</span>
+                </div>
             </div>
 
             <!-- BOTONES -->
             <div id="botones">
-                <button type="button" class="btnStyleModalGlobal">ENVIAR POR EMAIL</button>
-                <button type="button" class="btnStyleModalGlobal">VISUALIZAR PDF</button>
-                <button type="button" class="btnStyleModalGlobal">ENVIAR POR WHATSAPP</button>
-                <button type="button" class="btnStyleModalGlobal">DESCARGAR PDF</button>
-                <button type="button" class="btnStyleModalGlobal">IMPRIMIR</button>
-                <button type="button" class="btnStyleModalGlobal">GUIA DE REMISIÓN</button>
-                <button type="button" class="btnStyleModalGlobal">NOTA DE CRÉDITO</button>
-                <button type="button" class="btnStyleModalGlobal">NOTA DE DÉBITO</button>
-                <button type="button" class="btnStyleModalGlobal">DESCARGAR XML</button>
-                <button type="button" class="btnStyleModalGlobal">DESCARGAR CDR</button>
-                <button type="button" class="btnStyleModalGlobal">DAR DE BAJA (ANULAR)</button>
+                <button type="button" class="btnStyleModalGlobal negrita">ENVIAR POR EMAIL</button>
+                <button type="button" class="btnStyleModalGlobal negrita">VISUALIZAR PDF</button>
+                <button type="button" class="btnStyleModalGlobal negrita">DESCARGAR PDF</button>
+                <button type="button" class="btnStyleModalGlobal negrita">IMPRIMIR</button>
+                <button type="button" class="btnStyleModalGlobal negrita">GUIA DE REMISIÓN</button>
+                <button type="button" class="btnStyleModalGlobal negrita">NOTA DE CRÉDITO</button>
+                <button type="button" class="btnStyleModalGlobal negrita">NOTA DE DÉBITO</button>
+                <button type="button" class="btnStyleModalGlobal negrita">DESCARGAR XML</button>
+                <button type="button" class="btnStyleModalGlobal negrita">DESCARGAR CDR</button>
+                <button type="button" class="rojoBotonFondo btnStyleModalGlobal span-2 negrita">DAR DE BAJA (ANULAR)</button>
             </div>
         </div>
     </div>
