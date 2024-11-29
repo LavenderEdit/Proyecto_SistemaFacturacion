@@ -82,4 +82,6 @@
 .labelBonito textarea:focus+label,
 .labelBonito select:focus+label {
     color: #4a6ae1;
+    font-weight: bold;
+    border-bottom: 3px solid white;
 }

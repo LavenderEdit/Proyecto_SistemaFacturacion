@@ -1,11 +1,11 @@
 .invoice {
-    max-width: 800px; /* Mantiene el ancho máximo */
-    margin: auto; /* Centra el contenido */
-    background-color: #fff; /* Fondo blanco */
-    padding: 10px; /* Reduce el relleno para ahorrar espacio */
-    border: 1px solid #ddd; /* Borde */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    font-size: 10px;  /* Reduce el tamaño de la fuente para que quepa en A4 */
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 10px;
 }
 
 .proforma {
@@ -26,7 +26,7 @@ header .header-left {
 }
 
 header .header-right {
-    text-align: right;
+    text-align: center;
 }
 
 .logo {
@@ -120,7 +120,7 @@ footer h2 {
 
 .pdf-button {
     text-align: center;
-    margin-top: 40px; /* Ajusta esta propiedad para añadir espacio entre la factura y el botón */
+    margin-top: 40px;
 }
 
 .pdf-button button {
@@ -143,5 +143,4 @@ footer h2 {
 .pdf-icon {
     font-size: 20px;
 }
-
 
