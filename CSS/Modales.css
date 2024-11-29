@@ -1,12 +1,13 @@
 @import url('./ReajustadorDeMargenes.css');
+@import url('./Colores.css');
 @import url('./ClasesGenerales.css');
 @import url('./styleModalEditarProducto.css');
 @import url('./styleModalCliente.css');
 @import url('./styleModalVenta.css');
 
-/* Botones */ 
+/* Botones */
 .btnStyleModalGlobal {
-  background-color: #007bff;
+  background-color: #334FBA;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -19,18 +20,18 @@
 
 .btnStyleModalGlobal[type="submit"] {
   width: 100%;
-  background-color: #007bff;
+  background-color: #334FBA;
   font-size: 16px;
   transition: all 0.3s ease;
 }
 
 .btnStyleModalGlobal:hover {
-  background-color: #0056b3;
+  background-color: #233782;
 }
 
 /* Modal */
 .modal-header {
-  background-color: #4a6ae1;
+  background-color: #334FBA;
   padding: 15px;
 }
 

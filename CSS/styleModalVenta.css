@@ -1,14 +1,66 @@
-/* Modal 2 */
+/* Modal 3 */
 #modalTres {
-  width: 500px;
-  min-height: 600px;
+  width: 400px;
+  min-height: 400px;
   margin: 50px auto;
-  background-color: #fff;
-  border-radius: 10px;
+  background-color: #F3F3F3;
+  border-radius: 5px;
+  border: 0.5px solid black;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-rows: auto 1fr auto;
   position: relative;
   overflow: hidden;
-  max-height: 100vh;
+  height: 680px;
+}
+
+.content {
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.fondo-content {
+  background-color: white;
+  padding-inline: 5px;
+  padding-block: 20px;
+  display: flex;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#facturaElectronica {
+  flex-direction: column;
+  text-align: center;
+}
+
+#informacionFactura {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#informacionFactura > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#informacionFactura span:first-child {
+  font-weight: bold;
+  color: black;
+}
+
+#informacionFactura span:not(:first-child) {
+  color: #6c757d;
+}
+
+#informacionFactura div + div {
+  border-top: 1px solid #d3d3d3;
+  padding-top: 10px;
+}
+
+#botones {
+  display: grid;
+  grid-template-columns: repeat(2, 5fr);
 }
