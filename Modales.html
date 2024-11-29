@@ -10,71 +10,65 @@
 
 <body>
     <div class="modalOne" id="modalUno">
-        <form>
-            <!-- PRODUCTO -->
-            <div id="producto">
-                <label for="producto" id="sinNombre">NOMBRE</label>
-                <div>
-                    <input type="text" id="producto" placeholder="PRODUCTO" />
+        <form id="formProducto">
+            <!-- Primera fila -->
+            <div class="form-group labelBonito">
+                <label for="producto" class="lblStyleGlobalModal">NOMBRE</label>
+                <div class="wrapper input-wrapper">
+                    <input type="text" id="producto" placeholder="PRODUCTO" class="inptStyleGlobalModal" />
+                    <button type="button" class="edit-btn negrita" title="Editar">✎</button>
+                </div>
+            </div>
+            <div class="form-group labelBonito">
+                <label for="almacenSalida" class="lblStyleGlobalModal">ALMACÉN SALIDA</label>
+                <select id="almacenSalida" class="selectStyleGlobalModal">
+                    <option value="lubricantes">LUBRICANTES CLAUDIA</option>
+                    <option value="almacen2">ALMACÉN 2</option>
+                    <option value="almacen3">ALMACÉN 3</option>
+                </select>
+            </div>
+
+            <!-- Segunda fila -->
+            <div class="form-group labelBonito">
+                <label for="precioUnitario" class="lblStyleGlobalModal">PRECIO UNITARIO</label>
+                <div class="wrapper input-wrapper">
+                    <input type="text" id="precioUnitario" placeholder="S/ 0.00" class="inptStyleGlobalModal" />
                     <button type="button" class="edit-btn negrita" title="Editar">✎</button>
                 </div>
             </div>
 
-            <!-- ALMACEN SALIDA -->
-            <div id="almacenSalida">
-                <label for="almacenSalida">ALMACEN SALIDA</label>
-                <select id="almacenSalida">
-                    <option value="lubricantes">TIENDITAS PE PERRAS</option>
-                    <option value="lubricantes">ME VENGOOOO</option>
-                    <option value="lubricantes">PENE CON CACA</option>
-                </select>
-            </div>
-
-            <!-- PRECIO UNITARIO -->
-            <div id="precioUnitario">
-                <label for="precioUnitario">PRECIO UNITARIO</label>
-                <div>
-                    <input type="text" id="precioUnitario" placeholder="S/0.00" />
-                    <button type="button" title="Editar">ICONO</button>
+            <div class="form-group labelBonito">
+                <label for="cantidad" class="lblStyleGlobalModal">CANTIDAD</label>
+                <div class="wrapper quantity-wrapper">
+                    <input type="number" id="cantidad" class="inptStyleGlobalModal" />
+                    <div class="decreaseIncreaseButtons">
+                        <button type="button" class="negrita">-</button>
+                        <button type="button" class="negrita">+</button>
+                    </div>
                 </div>
             </div>
 
-            <!-- CANTIDAD-->
-            <div id="cantidad">
-                <label for="cantidad">CANTIDAD</label>
-                <div>
-                    <button type="button">-</button>
-                    <input type="number" id="cantidad" value="1" />
-                    <button type="button">+</button>
-                    <button type="button" title="Calculadora">ICONO</button>
+            <!-- Tercera fila -->
+            <div class="form-group labelBonito">
+                <label for="descuento" class="lblStyleGlobalModal">DESCUENTO</label>
+                <div class="wrapper discount-wrapper">
+                    <input type="text" id="descuento" class="inptStyleGlobalModal" value="0.00"/>
+                    <span class="percentage">%</span>
                 </div>
+            </div>            
+
+            <div id="total" class="totalStyleGlobalModal sinCopiar">
+                <span class="negrita">TOTAL >> </span>
+                <span id="totalProductoModal" class="negrita">S/ 0.00</span>
             </div>
 
-            <!-- DESCUENTO -->
-            <div id="descuento">
-                <label for="descuento" style="margin-right: 10px">DESCUENTO</label>
-                <input type="checkbox" id="descuento" />
-                <label for="descuento">%</label>
-            </div>
-
-            <!-- DETALLE ADICIONAL -->
-            <div id="detalleAdicional">
-                <label for="detalleAdicional">DETALLE ADICIONAL</label>
-                <textarea id="detalleAdicional" rows="3"></textarea>
-            </div>
-
-            <!-- TOTAL -->
-            <div id="total">
-                <strong>Total: </strong>
-                <span>S/ 0.00</span>
-            </div>
-
-            <!-- GUARDAR -->
-            <div id="guardar">
-                <button type="submit">Guardar</button>
+            <!-- Botón de guardar -->
+            <div class="form-group span-2" id="guardar">
+                <button type="submit" class="btnStyleModalGlobal">GUARDAR</button>
             </div>
         </form>
     </div>
+
 
     <br></br>
 
@@ -94,39 +88,35 @@
             </div>
         </div>
         <div class="modal-body">
-            <div class="form">
-                <div class="form-group">
-                    <label for="tipoDocumento">Tipo de documento</label>
-                    <select id="tipoDocumento">
+            <form class="form" id="formCliente" method="POST">
+                <div class="form-group labelBonito">
+                    <label for="tipoDocumento" class="lblStyleGlobalModal sinCopiar">Tipo de documento</label>
+                    <select id="tipoDocumento" class="selectStyleGlobalModal">
                         <option value="ruc">RUC</option>
                         <option value="dni">DNI</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="numeroDocumento">Número de documento</label>
-                    <input type="text" id="numeroDocumento" value="" />
+                <div class="form-group labelBonito">
+                    <label for="numeroDocumento" class="lblStyleGlobalModal  sinCopiar">Número de documento</label>
+                    <input type="text" id="numeroDocumento" class="inptStyleGlobalModal" />
                 </div>
-                <div class="form-group">
-                    <label for="nombreRazonSocial">Nombre o razón social</label>
-                    <input type="text" id="nombreRazonSocial" value="" />
+                <div class="form-group labelBonito span-2">
+                    <label for="nombreRazonSocial" class="lblStyleGlobalModal  sinCopiar">Nombre o razón social</label>
+                    <input type="text" id="nombreRazonSocial" class="inptStyleGlobalModal" />
                 </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono</label>
-                    <input type="text" id="telefono" value="" />
+                <div class="form-group labelBonito">
+                    <label for="telefono" class="lblStyleGlobalModal  sinCopiar">Teléfono</label>
+                    <input type="text" id="telefono" class="inptStyleGlobalModal" />
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" />
+                <div class="form-group labelBonito">
+                    <label for="email" class="lblStyleGlobalModal  sinCopiar">Email</label>
+                    <input type="email" id="email" class="inptStyleGlobalModal" />
                 </div>
-                <div class="form-group">
-                    <label for="direccion">Dirección principal</label>
-                    <textarea id="direccion" rows="3"></textarea>
+                <div class="form-group labelBonito span-2">
+                    <label for="direccion" class="lblStyleGlobalModal  sinCopiar">Dirección principal</label>
+                    <textarea id="direccion" rows="1" class="textAreaStyleGlobalModal"></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="observaciones">Observaciones adicionales</label>
-                    <textarea id="observaciones" rows="3"></textarea>
-                </div>
-            </div>
+            </form>
         </div>
         <div class="modal-footer">
             <button class="cancel-btn">Cancelar</button>
@@ -173,17 +163,17 @@
 
             <!-- BOTONES -->
             <div id="botones">
-                <button type="button">ENVIAR POR EMAIL</button>
-                <button type="button">VISUALIZAR PDF</button>
-                <button type="button">ENVIAR POR WHATSAPP</button>
-                <button type="button">DESCARGAR PDF</button>
-                <button type="button">IMPRIMIR</button>
-                <button type="button">GUIA DE REMISIÓN</button>
-                <button type="button">NOTA DE CRÉDITO</button>
-                <button type="button">NOTA DE DÉBITO</button>
-                <button type="button">DESCARGAR XML</button>
-                <button type="button">DESCARGAR CDR</button>
-                <button type="button">DAR DE BAJA (ANULAR)</button>
+                <button type="button" class="btnStyleModalGlobal">ENVIAR POR EMAIL</button>
+                <button type="button" class="btnStyleModalGlobal">VISUALIZAR PDF</button>
+                <button type="button" class="btnStyleModalGlobal">ENVIAR POR WHATSAPP</button>
+                <button type="button" class="btnStyleModalGlobal">DESCARGAR PDF</button>
+                <button type="button" class="btnStyleModalGlobal">IMPRIMIR</button>
+                <button type="button" class="btnStyleModalGlobal">GUIA DE REMISIÓN</button>
+                <button type="button" class="btnStyleModalGlobal">NOTA DE CRÉDITO</button>
+                <button type="button" class="btnStyleModalGlobal">NOTA DE DÉBITO</button>
+                <button type="button" class="btnStyleModalGlobal">DESCARGAR XML</button>
+                <button type="button" class="btnStyleModalGlobal">DESCARGAR CDR</button>
+                <button type="button" class="btnStyleModalGlobal">DAR DE BAJA (ANULAR)</button>
             </div>
         </div>
     </div>

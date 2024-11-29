@@ -34,6 +34,54 @@
 }
 
 .active-tab {
+    background-color: white;
+    border: 2px solid #4a6ae1;
+    border-bottom: none;
+    color: black;
+    font-weight: bold;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.labelBonito {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.labelBonito label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #999;
+    margin-bottom: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.labelBonito input,
+.labelBonito textarea,
+.labelBonito select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.labelBonito input:focus,
+.labelBonito textarea:focus,
+.labelBonito select:focus {
+    border-color: #4a6ae1;
+}
+
+.labelBonito input:focus+label,
+.labelBonito textarea:focus+label,
+.labelBonito select:focus+label {
+    color: #4a6ae1;
     font-weight: bold;
     border-bottom: 3px solid white;
 }

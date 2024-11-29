@@ -32,6 +32,7 @@ header .header-right {
 .logo {
     font-size: 20px;
     font-weight: bold;
+    border: 2px solid #003366;
     padding: 10px;
 }
 
@@ -142,3 +143,4 @@ footer h2 {
 .pdf-icon {
     font-size: 20px;
 }
+

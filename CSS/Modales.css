@@ -4,36 +4,8 @@
 @import url('./styleModalCliente.css');
 @import url('./styleModalVenta.css');
 
-/* Form 1 */
-form {
-  width: 100%;
-}
-
-/* Etiquetas y campos */
-label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="number"],
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  font-size: 14px;
-}
-
-textarea {
-  resize: none;
-}
-
-/* Botones */
-button {
+/* Botones */ 
+.btnStyleModalGlobal {
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -42,57 +14,92 @@ button {
   cursor: pointer;
   font-size: 14px;
   margin: 5px;
+  transition: all 0.3s ease;
 }
 
-button[type="submit"] {
+.btnStyleModalGlobal[type="submit"] {
   width: 100%;
   background-color: #007bff;
   font-size: 16px;
+  transition: all 0.3s ease;
 }
 
-button:hover {
+.btnStyleModalGlobal:hover {
   background-color: #0056b3;
 }
 
-/* Contenedores para organizar los elementos */
-#producto div,
-#precioUnitario div,
-#cantidad div {
+/* Modal */
+.modal-header {
+  background-color: #4a6ae1;
+  padding: 15px;
+}
+
+/* Cabecera de un modal */
+.header-title {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
 }
 
-/* Sección de cantidad */
-#cantidad button {
-  background-color: #f0f0f0;
-  color: #000;
-  font-weight: bold;
-  border: 1px solid #ccc;
-  padding: 5px 10px;
+.header-title h2 {
+  margin: 0;
+  font-size: 1.2rem;
 }
 
-#cantidad button:hover {
-  background-color: #e0e0e0;
+.header-title .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
-/* Total */
-#total {
-  font-size: 18px;
-  font-weight: bold;
-  text-align: right;
-  margin-bottom: 20px;
+.header-title .close-btn:hover {
+  opacity: 0.8;
 }
 
-#total span {
-  color: #007bff;
+/* Pestañas de la cabecera */
+.header-tabs {
+  grid-row: 2;
+  padding-block: 15px 10px;
+  color: white;
 }
 
-/* Estilos para el checkbox de descuento */
-#descuento {
+.form-group {
   display: flex;
-  align-items: center;
-  gap: 5px;
+  flex-direction: column;
+}
+
+.lblStyleGlobalModal {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.selectStyleGlobalModal,
+.inptStyleGlobalModal,
+.textAreaStyleGlobalModal {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.inptStyleGlobalModal,
+.selectStyleGlobalModal {
+  height: 40px;
+}
+
+.textAreaStyleGlobalModal {
+  resize: none;
+  min-height: 80px;
 }
 
 .edit-btn {
@@ -105,138 +112,16 @@ button:hover {
 }
 
 .edit-btn:hover {
-  color: white;
+  color: #007bff;
   opacity: 0.8;
 }
 
-/* Modal 2 */
-.modal-header {
-  background-color: #4a6ae1;
-  padding-block: 15px;
-  padding-inline: 20px;
-}
-
-/* Cabecera de un modal */
-.header-title {
-display: flex;
-justify-content: space-between;
-align-items: center;
-color: white;
-border-radius: 10px 10px 0 0;
-width: 100%;
-}
-
-.header-title h2 {
-margin: 0;
-font-size: 1.2rem;
-}
-
-.header-title .close-btn {
-background: none;
-border: none;
-color: white;
-font-size: 1.5rem;
-cursor: pointer;
-transition: opacity 0.3s ease;
-}
-
-.header-title .close-btn:hover {
-opacity: 0.8;
-}
-
-/* Pestañas de la cabecera */
-.header-tabs {
-grid-row: 2;
-padding: 15px;
-color: white;
-}
-
-.tabs {
-display: flex;
-justify-content: space-evenly;
-border-bottom: 2px solid #4a6ae1;
-}
-
-.tab {
-border-radius: 5px;
-padding: 10px;
-cursor: pointer;
-font-size: 1rem;
-transition: all 0.3s ease;
-}
-
-.tab:hover {
-background-color: #f0f0f0;
-color: black;
-}
-
-/* Cuerpo del modal 2 */
-#modalDos .modal-body {
-grid-row: 3;
-padding: 20px 20px 10px;
-overflow-y: auto;
-max-height: calc(70vh - 40px);
-}
-
-.form-group {
-margin-bottom: 15px;
-}
-
-label {
-font-weight: bold;
-margin-bottom: 5px;
-display: block;
-}
-
-input,
-select,
-textarea {
-width: 100%;
-padding: 8px;
-border-radius: 6px;
-border: 1px solid #ccc;
-font-size: 1rem;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-margin-bottom: 10px;
-}
-
-textarea {
-resize: vertical;
-}
-
-/* Footer del modal 2 */
-#modalDos .modal-footer {
-grid-row: 4;
-display: flex;
-justify-content: flex-end;
-padding: 15px 20px;
-background-color: #f5f5f5;
-border-top: 1px solid #ccc;
-}
-
-#modalDos .modal-footer button {
-padding: 12px 25px;
-border: none;
-border-radius: 8px;
-font-size: 1rem;
-color: white;
-cursor: pointer;
-transition: opacity 0.3s ease;
-}
-
-#modalDos .modal-footer .cancel-btn {
-background-color: #e0e0e0;
-margin-right: 10px;
-}
-
-#modalDos .modal-footer .save-btn {
-background-color: #4a6ae1;
-}
-
-#modalDos .modal-footer button:hover {
-opacity: 0.8;
+.totalStyleGlobalModal {
+  background-color: lightgray;
+  padding: 5px;
+  text-align: center;
+  align-content: center;
+  color: black;
+  border-radius: 15px;
+  height: 50px;
 }
