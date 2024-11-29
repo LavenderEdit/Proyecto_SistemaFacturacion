@@ -1,0 +1,98 @@
+.modalOne {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 650px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+}
+
+#formProducto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-wrapper, .discount-wrapper {
+  position: relative;
+}
+
+.input-wrapper input, .discount-wrapper input{
+  padding-right: 30px;
+}
+
+.input-wrapper button, .discount-wrapper .percentage {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-65%);
+  color: gray;
+  font-size: 1rem;
+}
+
+.decreaseIncreaseButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.decreaseIncreaseButtons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.decreaseIncreaseButtons button:hover {
+  background-color: #0056b3;
+}
+
+#totalProductoModal {
+  font-size: 1.2rem;
+}
+
+.edit-btn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  color: #007bff;
+  opacity: 0.8;
+}
+
+.totalStyleGlobalModal {
+  background-color: lightgray;
+  padding: 5px;
+  text-align: center;
+  color: black;
+  border-radius: 15px;
+  height: 50px;
+}
