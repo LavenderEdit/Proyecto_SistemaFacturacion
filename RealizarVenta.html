@@ -84,16 +84,19 @@
                 </div>
                 <div>
                     <span class="symbol escondido sinCopiar" style="background-color: chocolate;">✓</span>
-                    <button type="button" class="buttonClass" style="background-color: chocolate;">ORD. COMPRA</button> 
-                    <input type="hidden" class="inputHidden" id="ordenCompraInput" name="ordCompra" placeholder="Ingrese Ord. de Compra">
+                    <button type="button" class="buttonClass" style="background-color: chocolate;">ORD. COMPRA</button>
+                    <input type="hidden" class="inputHidden" id="ordenCompraInput" name="ordCompra"
+                        placeholder="Ingrese Ord. de Compra">
                 </div>
                 <div>
                     <button type="button" style="background-color: brown;">GUI. REMISIÓN</button>
                 </div>
                 <div>
                     <span class="symbol escondido sinCopiar" style="background-color: cadetblue;">✓</span>
-                    <button type="button" class="buttonClass" style="background-color: cadetblue;">OBSERVACIONES</button>
-                    <input type="hidden" class="inputHidden" id="ObservacionesInput" name="observaciones" placeholder="Ingrese Observaciones">
+                    <button type="button" class="buttonClass"
+                        style="background-color: cadetblue;">OBSERVACIONES</button>
+                    <input type="hidden" class="inputHidden" id="ObservacionesInput" name="observaciones"
+                        placeholder="Ingrese Observaciones">
                 </div>
                 <div>
                     <button type="button" style="background-color: darkcyan;">CONDI. PAGO</button>
@@ -105,132 +108,120 @@
         </div>
         <div id="bodyForm">
             <ol class="contenedorProductosBody">
-                <li class="productoBody">
+                <li class="productoBody" data-index="0">
                     <div id="ContenedorNombreProducto">
-                        <span class="negrita">PRODUCTO</span>                    
+                        <span id="producto_0" class="negrita">PRODUCTO</span>
                     </div>
                     <div id="increaseDecreaseProduct">
-                        <button type="button">-</button>
-                        <input type="text" readonly value="1">
-                        <button type="button">+</button>
+                        <button type="button" data-action="decrementar" data-index="0">-</button>
+                        <input name="producto[0].cantidad" id="cantidad_0" type="text" readonly value="1"
+                            data-incluye-igv="S">
+                        <button type="button" data-action="incrementar" data-index="0">+</button>
                     </div>
                     <div id="contenedorInfoProducto">
                         <div class="infoProducto">
-                            <span class="negrita">ALMACEN</span>
-                            <span>LUBRICANTES CLAUDIA</span>
+                            <span class="negrita">ALMACÉN</span>
+                            <span id="almacen_0">LUBRICANTES CLAUDIA</span>
                         </div>
                         <div class="infoProducto">
                             <span class="negrita">PRECIO UNIT.</span>
-                            <span>S/. 0.01</span>
+                            <span>S/. 10.00</span>
+                            <input type="hidden" name="producto[0].precioUnitario" id="precio_0" value="10.00">
                         </div>
                         <div class="infoProducto">
                             <span class="negrita">DESCUENTO</span>
                             <span>S/. 0.00</span>
+                            <input type="hidden" name="producto[0].descuento" id="descuento_0" value="0.00">
                         </div>
                         <div class="infoProducto">
                             <span class="negrita">TOTAL</span>
-                            <span class="negrita">S/. 0.01</span>
+                            <span class="totalConDescuento negrita" id="totalConDescuento_0" data-moneda="S/.">S/.
+                                10.00</span>
+                            <input type="hidden" name="producto[0].totalConDescuento" id="totalConDescuentoHidden_0"
+                                value="10.00">
                         </div>
                     </div>
                     <div id="deleteProduct">
-                        <button type="submit" class="negrita">ELIMINAR</button>
+                        <button type="button" class="negrita" data-action="eliminar">ELIMINAR</button>
                     </div>
                 </li>
-                <li class="productoBody">
+                <li class="productoBody" data-index="1">
                     <div id="ContenedorNombreProducto">
-                        <span class="negrita">PRODUCTO</span>                    
+                        <span id="producto_1" class="negrita">PRODUCTO</span>
                     </div>
                     <div id="increaseDecreaseProduct">
-                        <button type="button">-</button>
-                        <input type="text" readonly value="1">
-                        <button type="button">+</button>
+                        <button type="button" data-action="decrementar" data-index="1">-</button>
+                        <input name="producto[1].cantidad" id="cantidad_1" type="text" readonly value="1"
+                            data-incluye-igv="S">
+                        <button type="button" data-action="incrementar" data-index="1">+</button>
                     </div>
                     <div id="contenedorInfoProducto">
                         <div class="infoProducto">
-                            <span class="negrita">ALMACEN</span>
-                            <span>LUBRICANTES CLAUDIA</span>
+                            <span class="negrita">ALMACÉN</span>
+                            <span id="almacen_1">LUBRICANTES CLAUDIA</span>
                         </div>
                         <div class="infoProducto">
                             <span class="negrita">PRECIO UNIT.</span>
-                            <span>S/. 0.01</span>
+                            <span>S/. 15.00</span>
+                            <input type="hidden" name="producto[1].precioUnitario" id="precio_1" value="15.00">
                         </div>
                         <div class="infoProducto">
                             <span class="negrita">DESCUENTO</span>
-                            <span>S/. 0.00</span>
+                            <span>S/. 10.00</span>
+                            <input type="hidden" name="producto[1].descuento" id="descuento_1" value="10.00">
                         </div>
                         <div class="infoProducto">
                             <span class="negrita">TOTAL</span>
-                            <span class="negrita">S/. 0.01</span>
+                            <span class="totalConDescuento negrita" id="totalConDescuento_1" data-moneda="S/.">S/.
+                                5.00</span>
+                            <input type="hidden" name="producto[1].totalConDescuento" id="totalConDescuentoHidden_1"
+                                value="5.00">
                         </div>
                     </div>
                     <div id="deleteProduct">
-                        <button type="submit" class="negrita">ELIMINAR</button>
+                        <button type="button" class="negrita" data-action="eliminar">ELIMINAR</button>
                     </div>
                 </li>
-                <li class="productoBody">
+                <li class="productoBody" data-index="2">
                     <div id="ContenedorNombreProducto">
-                        <span class="negrita">PRODUCTO</span>                    
+                        <span id="producto_2" class="negrita">PRODUCTO</span>
                     </div>
                     <div id="increaseDecreaseProduct">
-                        <button type="button">-</button>
-                        <input type="text" readonly value="1">
-                        <button type="button">+</button>
+                        <button type="button" data-action="decrementar" data-index="2">-</button>
+                        <input name="producto[2].cantidad" id="cantidad_2" type="text" readonly value="1"
+                            data-incluye-igv="S">
+                        <button type="button" data-action="incrementar" data-index="2">+</button>
                     </div>
                     <div id="contenedorInfoProducto">
                         <div class="infoProducto">
-                            <span class="negrita">ALMACEN</span>
-                            <span>LUBRICANTES CLAUDIA</span>
+                            <span class="negrita">ALMACÉN</span>
+                            <span id="almacen_2">LUBRICANTES CLAUDIA</span>
                         </div>
                         <div class="infoProducto">
                             <span class="negrita">PRECIO UNIT.</span>
-                            <span>S/. 0.01</span>
+                            <span>S/. 90.00</span>
+                            <input type="hidden" name="producto[2].precioUnitario" id="precio_2" value="90.00">
                         </div>
                         <div class="infoProducto">
                             <span class="negrita">DESCUENTO</span>
-                            <span>S/. 0.00</span>
+                            <span>S/. 25.00</span>
+                            <input type="hidden" name="producto[2].descuento" id="descuento_2" value="25.00">
                         </div>
                         <div class="infoProducto">
                             <span class="negrita">TOTAL</span>
-                            <span class="negrita">S/. 0.01</span>
+                            <span class="totalConDescuento negrita" id="totalConDescuento_2" data-moneda="S/.">S/.
+                                65.00</span>
+                            <input type="hidden" name="producto[2].totalConDescuento" id="totalConDescuentoHidden_2"
+                                value="65.00">
                         </div>
                     </div>
                     <div id="deleteProduct">
-                        <button type="submit" class="negrita">ELIMINAR</button>
-                    </div>
-                </li>
-                <li class="productoBody">
-                    <div id="ContenedorNombreProducto">
-                        <span class="negrita">PRODUCTO</span>                    
-                    </div>
-                    <div id="increaseDecreaseProduct">
-                        <button type="button">-</button>
-                        <input type="text" readonly value="1">
-                        <button type="button">+</button>
-                    </div>
-                    <div id="contenedorInfoProducto">
-                        <div class="infoProducto">
-                            <span class="negrita">ALMACEN</span>
-                            <span>LUBRICANTES CLAUDIA</span>
-                        </div>
-                        <div class="infoProducto">
-                            <span class="negrita">PRECIO UNIT.</span>
-                            <span>S/. 0.01</span>
-                        </div>
-                        <div class="infoProducto">
-                            <span class="negrita">DESCUENTO</span>
-                            <span>S/. 0.00</span>
-                        </div>
-                        <div class="infoProducto">
-                            <span class="negrita">TOTAL</span>
-                            <span class="negrita">S/. 0.01</span>
-                        </div>
-                    </div>
-                    <div id="deleteProduct">
-                        <button type="submit" class="negrita">ELIMINAR</button>
+                        <button type="button" class="negrita" data-action="eliminar">ELIMINAR</button>
                     </div>
                 </li>
             </ol>
         </div>
+
         <div id="footerForm">
             <div id="BuscadorProducto">
                 <div id="contenedorProducto" class="productoLista escondido">
@@ -273,53 +264,53 @@
                     <ul>
                         <li>
                             <span class="oneSpan">ANTICIPOS</span>
-                            <span class="twoSpan">0.00</span>
+                            <span class="twoSpan" id="anticipo-info">0.00</span>
                         </li>
                         <li>
                             <span class="oneSpan">DSCTO.</span>
-                            <span class="twoSpan">0.00</span>
+                            <span class="twoSpan" id="desc-info">0.00</span>
                         </li>
                         <li>
                             <span class="oneSpan">GRAVADO</span>
-                            <span class="twoSpan">0.00</span>
+                            <span class="twoSpan" id="gravado-info">0.00</span>
                         </li>
                         <li>
                             <span class="oneSpan">EXONERADO</span>
-                            <span class="twoSpan">0.00</span>
+                            <span class="twoSpan" id="exonerado-info">0.00</span>
                         </li>
                         <li>
                             <span class="oneSpan">INAFECTO</span>
-                            <span class="twoSpan">0.00</span>
+                            <span class="twoSpan" id="inafecto-info">0.00</span>
                         </li>
                         <li>
                             <span class="oneSpan">EXPORTACIÓN</span>
-                            <span class="twoSpan">0.00</span>
+                            <span class="twoSpan" id="export-info">0.00</span>
                         </li>
                         <li>
                             <span class="oneSpan">GRATUITO</span>
-                            <span class="twoSpan">0.00</span>
+                            <span class="twoSpan" id="gratuito-info">0.00</span>
                         </li>
                         <li>
                             <span class="oneSpan">I.S.C.</span>
-                            <span class="twoSpan">0.00</span>
+                            <span class="twoSpan" id="isc-info">0.00</span>
                         </li>
                         <li>
                             <span class="oneSpan">I.G.V.</span>
-                            <span class="twoSpan">0.00</span>
+                            <span class="twoSpan" id="igv-info">0.00</span>
                         </li>
                         <li>
                             <span class="oneSpan">R.C.</span>
-                            <span class="twoSpan">0.00</span>
+                            <span class="twoSpan" id="rc-info">0.00</span>
                         </li>
                         <li>
                             <span class="oneSpan">I.C.B.P.E.R.</span>
-                            <span class="twoSpan">0.00</span>
+                            <span class="twoSpan" id="icbper-info">0.00</span>
                         </li>
                     </ul>
                 </div>
                 <div id="botonesEnviar">
-                    <button type="button" style="background-color: darkred;">Limpiar</button>
-                    <button type="submit" style="background-color: darkgreen;">Procesar</button>
+                    <button type="button" class="rojoOscuroBotonFondo erase-btn">Limpiar</button>
+                    <button type="submit" class="verdeOscuroBotonFondo process-btn">Procesar</button>
                 </div>
             </div>
         </div>

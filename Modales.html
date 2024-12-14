@@ -9,13 +9,13 @@
 </head>
 
 <body>
-    <div class="modalOne" id="modalUno">
+    <div class="modal escondido" id="modalUno">
         <form id="formProducto">
             <!-- Primera fila -->
             <div class="form-group labelBonito">
                 <label for="producto" class="lblStyleGlobalModal">NOMBRE</label>
                 <div class="wrapper input-wrapper">
-                    <input type="text" id="producto" placeholder="PRODUCTO" class="inptStyleGlobalModal" />
+                    <input type="text" id="producto" placeholder="PRODUCTO" class="inptStyleGlobalModal" disabled/>
                     <button type="button" class="edit-btn negrita" title="Editar">✎</button>
                 </div>
             </div>
@@ -32,7 +32,7 @@
             <div class="form-group labelBonito">
                 <label for="precioUnitario" class="lblStyleGlobalModal">PRECIO UNITARIO</label>
                 <div class="wrapper input-wrapper">
-                    <input type="text" id="precioUnitario" placeholder="S/ 0.00" class="inptStyleGlobalModal" />
+                    <input type="number" id="precioUnitario" placeholder="S/ 0.00" class="inptStyleGlobalModal" disabled/>
                     <button type="button" class="edit-btn negrita" title="Editar">✎</button>
                 </div>
             </div>
@@ -40,10 +40,10 @@
             <div class="form-group labelBonito">
                 <label for="cantidad" class="lblStyleGlobalModal">CANTIDAD</label>
                 <div class="wrapper quantity-wrapper">
-                    <input type="number" id="cantidad" class="inptStyleGlobalModal" />
+                    <input type="number" id="cantidad" class="inptStyleGlobalModal" value="1"/>
                     <div class="decreaseIncreaseButtons">
-                        <button type="button" class="negrita">-</button>
-                        <button type="button" class="negrita">+</button>
+                        <button type="button" data-action="decremento-modal" class="negrita">-</button>
+                        <button type="button" data-action="incremento-modal" class="negrita">+</button>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
             <div class="form-group labelBonito">
                 <label for="descuento" class="lblStyleGlobalModal">DESCUENTO</label>
                 <div class="wrapper discount-wrapper">
-                    <input type="text" id="descuento" class="inptStyleGlobalModal" value="0.00" />
+                    <input type="number" id="descuento" class="inptStyleGlobalModal" placeholder="0.00"/>
                     <span class="percentage">%</span>
                 </div>
             </div>
@@ -72,7 +72,7 @@
 
     <br></br>
 
-    <div class="modalTwo" id="modalDos">
+    <div class="modal escondido" id="modalDos">
         <div class="modal-header">
             <div class="header-title">
                 <h2>Cliente / Proveedor</h2>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="form-group labelBonito">
                     <label for="email" class="lblStyleGlobalModal  sinCopiar">Email</label>
-                    <input type="email" id="email" class="inptStyleGlobalModal" />
+                    <input type="email" id="email" class="inptStyleGlobalModal" autocomplete="email"/>
                 </div>
                 <div class="form-group labelBonito span-2">
                     <label for="direccion" class="lblStyleGlobalModal  sinCopiar">Dirección principal</label>
@@ -126,7 +126,7 @@
 
     <br></br>
 
-    <div class="modalThree" id="modalTres">
+    <div class="modal escondido" id="modalTres">
         <div class="modal-header">
             <div class="header-title">
                 <h2>Comprobante Electronico</h2>
@@ -178,6 +178,7 @@
             </div>
         </div>
     </div>
+    <script type="module" src="/JS/scriptModales.js"></script>
 </body>
 
 </html>
