@@ -1,7 +1,5 @@
-.modalOne {
-  display: flex;
+#modalUno {
   flex-direction: column;
-  position: relative;
   width: 650px;
   margin: 50px auto;
   background-color: #fff;

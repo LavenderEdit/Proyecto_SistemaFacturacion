@@ -6,6 +6,14 @@
     color: gray;
 }
 
+.rojoOscuroBotonFondo {
+    background-color: darkred;
+}
+
+.verdeOscuroBotonFondo {
+    background-color: darkgreen;
+}
+
 .rojoBotonFondo {
     background-color: #E53935 !important;
     transition: all 0.3s ease-in;

@@ -2,8 +2,11 @@
 @import url('./ReajustadorDeMargenes.css');
 @import url('./ClasesGenerales.css');
 @import url('./OverflowEstilos.css');
-@import url('./MensajesInteractivos.css');
 @import url('./MediaQueries.css');
+
+/* Importa modales */
+@import url('./MensajesInteractivos.css');
+@import url('./Modales.css');
 
 /* Colores de Letras Puros */
 @import url('./Colores.css');

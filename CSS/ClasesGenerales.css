@@ -25,8 +25,17 @@
     display: block;
 }
 
+.activo-resultados {
+    opacity: 1;
+    visibility: visible;
+}
+
 .activo-overlay {
     display: flex;
+}
+
+.activo-overlay-2 {
+    display: grid;
 }
 
 .boleta.highlight {
