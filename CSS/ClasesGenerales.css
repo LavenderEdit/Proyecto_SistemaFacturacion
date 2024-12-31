@@ -94,3 +94,55 @@
     font-weight: bold;
     border-bottom: 3px solid white;
 }
+
+/* NEW STUFF */
+.dirFlexCol {
+    flex-direction: column;
+}
+
+.dirFlexRow {
+    flex-direction: row;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+.textAlignJustified {
+    text-align: justify;
+}
+
+.textAlignRight {
+    text-align: right;
+}
+
+.textAlignLeft {
+    text-align: left;
+}
+
+/* Boton Ojo Contraseña */
+.pwd-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.btn-show-container {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-90%);
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-show-container svg {
+    transition: all 0.2s ease-in;
+}
+
+.btn-show-container svg:hover {
+    stroke: #1e0bd0;
+}

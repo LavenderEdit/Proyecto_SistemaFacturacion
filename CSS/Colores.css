@@ -1,9 +1,17 @@
+.blancoPuro {
+    color: white;
+}
+
 .verdePuro {
     color: green;
 }
 
 .grisPuro {
     color: gray;
+}
+
+.azulClaro {
+    color: #1E88E5;
 }
 
 .rojoOscuroBotonFondo {
@@ -19,6 +27,19 @@
     transition: all 0.3s ease-in;
 }
 
-.rojoBotonFondo:hover {
+.azulClaroBotonFondo {
+    background-color: #1E88E5 !important;
+    transition: all 0.3s ease-in;
+}
+
+.blancoPuroBotonFondo {
+    background-color: white !important;
+    border: solid black 0.5px;
+    transition: all 0.3s ease-in;
+}
+
+.rojoBotonFondo:hover,
+.azulClaroBotonFondo:hover,
+.blancoPuroBotonFondo:hover {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
 }

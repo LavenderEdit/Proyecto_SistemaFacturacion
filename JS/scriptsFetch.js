@@ -134,6 +134,7 @@ function manejarIncrementarCantidad(button) {
     const cantidadActual = parseInt(cantidadInput.value) || 0;
     cantidadInput.value = cantidadActual + 1;
     actualizarTotales(index);
+    calcularTotales();
   }
 }
 
@@ -145,6 +146,7 @@ function manejarDecrementarCantidad(button) {
     if (cantidadActual > 1) {
       cantidadInput.value = cantidadActual - 1;
       actualizarTotales(index);
+      calcularTotales();
     }
   }
 }
@@ -190,7 +192,6 @@ function actualizarTotales(index) {
     const cantidad = parseFloat(cantidadInput.value);
     const precioUnitario = parseFloat(precioUnitarioInput.value).toFixed(2);
     const descuento = parseFloat(descuentoInput.value).toFixed(2);
-
     let subtotal = precioUnitario * cantidad;
 
     if (!incluyeIGV) {

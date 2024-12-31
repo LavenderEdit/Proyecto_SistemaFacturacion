@@ -51,7 +51,7 @@ export function calcularTotales() {
   actualizarCampo(gravadoElement, gravado);
   actualizarCampo(igvElement, igv);
   actualizarCampo(descInfoElement, gravadoDelDescuento);
-}
+} 
 
 // FUNCIONES REUTILIZABLES
 function calcularGravadoDelDescuento(descuentoTotal) {
@@ -73,6 +73,18 @@ function calcularIGV(gravado) {
 
 function actualizarCampo(campo, valor) {
   campo.textContent = valor.toFixed(2);
+}
+
+export function convertirSolesAPorcentaje(descuentoSoles, PrecioUnitario) {
+  const porcentajeDescuento = (descuentoSoles/PrecioUnitario) * 100;
+  const porcentajeDescuentoParseado = parseFloat(porcentajeDescuento).toFixed(2);
+  return porcentajeDescuentoParseado;
+}
+
+export function convertirPorcentajeASoles(porcentajeDescuento, PrecioUnitario) {
+  const solesDescuento = PrecioUnitario * (porcentajeDescuento/100);
+  const solesDescuentoParseado = parseFloat(solesDescuento).toFixed(2);
+  return solesDescuentoParseado;
 }
 
 function limpiarProductos() {
