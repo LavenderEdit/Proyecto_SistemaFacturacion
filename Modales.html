@@ -9,175 +9,266 @@
 </head>
 
 <body>
-    <div class="modal escondido" id="modalUno">
-        <form id="formProducto">
-            <!-- Primera fila -->
-            <div class="form-group labelBonito">
-                <label for="producto" class="lblStyleGlobalModal">NOMBRE</label>
-                <div class="wrapper input-wrapper">
-                    <input type="text" id="producto" placeholder="PRODUCTO" class="inptStyleGlobalModal" disabled/>
-                    <button type="button" class="edit-btn negrita" title="Editar">✎</button>
-                </div>
-            </div>
-            <div class="form-group labelBonito">
-                <label for="almacenSalida" class="lblStyleGlobalModal">ALMACÉN SALIDA</label>
-                <select id="almacenSalida" class="selectStyleGlobalModal">
-                    <option value="lubricantes">LUBRICANTES CLAUDIA</option>
-                    <option value="almacen2">ALMACÉN 2</option>
-                    <option value="almacen3">ALMACÉN 3</option>
-                </select>
-            </div>
-
-            <!-- Segunda fila -->
-            <div class="form-group labelBonito">
-                <label for="precioUnitario" class="lblStyleGlobalModal">PRECIO UNITARIO</label>
-                <div class="wrapper input-wrapper">
-                    <input type="number" id="precioUnitario" placeholder="S/ 0.00" class="inptStyleGlobalModal" disabled/>
-                    <button type="button" class="edit-btn negrita" title="Editar">✎</button>
-                </div>
-            </div>
-
-            <div class="form-group labelBonito">
-                <label for="cantidad" class="lblStyleGlobalModal">CANTIDAD</label>
-                <div class="wrapper quantity-wrapper">
-                    <input type="number" id="cantidad" class="inptStyleGlobalModal" value="1"/>
-                    <div class="decreaseIncreaseButtons">
-                        <button type="button" data-action="decremento-modal" class="negrita">-</button>
-                        <button type="button" data-action="incremento-modal" class="negrita">+</button>
+    <div id="modal-container">
+        <div class="modal escondido" id="modalUno">
+            <form id="formProducto">
+                <!-- Primera fila -->
+                <div class="form-group labelBonito">
+                    <label for="producto" class="lblStyleGlobalModal">NOMBRE</label>
+                    <div class="wrapper input-wrapper">
+                        <input type="text" id="producto" placeholder="PRODUCTO" class="inptStyleGlobalModal" disabled />
+                        <button type="button" class="edit-btn negrita" title="Editar">✎</button>
                     </div>
                 </div>
-            </div>
-
-            <!-- Tercera fila -->
-            <div class="form-group labelBonito">
-                <label for="descuento" class="lblStyleGlobalModal">DESCUENTO</label>
-                <div class="wrapper discount-wrapper">
-                    <input type="number" id="descuento" class="inptStyleGlobalModal" placeholder="0.00"/>
-                    <span class="percentage">%</span>
-                </div>
-            </div>
-
-            <div id="total" class="totalStyleGlobalModal sinCopiar">
-                <span class="negrita">TOTAL >> </span>
-                <span id="totalProductoModal" class="negrita">S/ 0.00</span>
-            </div>
-
-            <!-- Botón de guardar -->
-            <div class="form-group span-2" id="guardar">
-                <button type="submit" class="btnStyleModalGlobal">Guardar</button>
-            </div>
-        </form>
-    </div>
-
-
-    <br></br>
-
-    <div class="modal escondido" id="modalDos">
-        <div class="modal-header">
-            <div class="header-title">
-                <h2>Cliente / Proveedor</h2>
-                <button class="close-btn">X</button>
-            </div>
-            <div class="header-tabs">
-                <ul class="tabs">
-                    <li class="tab active-tab">INFORMACIÓN</li>
-                    <li class="tab">VENTAS</li>
-                    <li class="tab">PROFORMAS</li>
-                    <li class="tab">GUÍAS DE REMISIÓN</li>
-                </ul>
-            </div>
-        </div>
-        <div class="modal-body">
-            <form class="form" id="formCliente" method="POST">
                 <div class="form-group labelBonito">
-                    <label for="tipoDocumento" class="lblStyleGlobalModal sinCopiar">Tipo de documento</label>
-                    <select id="tipoDocumento" class="selectStyleGlobalModal">
-                        <option value="ruc">RUC</option>
-                        <option value="dni">DNI</option>
+                    <label for="almacenSalida" class="lblStyleGlobalModal">ALMACÉN SALIDA</label>
+                    <select id="almacenSalida" class="selectStyleGlobalModal">
+                        <option value="lubricantes">LUBRICANTES CLAUDIA</option>
+                        <option value="almacen2">ALMACÉN 2</option>
+                        <option value="almacen3">ALMACÉN 3</option>
                     </select>
                 </div>
+
+                <!-- Segunda fila -->
                 <div class="form-group labelBonito">
-                    <label for="numeroDocumento" class="lblStyleGlobalModal  sinCopiar">Número de documento</label>
-                    <input type="text" id="numeroDocumento" class="inptStyleGlobalModal" />
+                    <label for="precioUnitario" class="lblStyleGlobalModal">PRECIO UNITARIO</label>
+                    <div class="wrapper input-wrapper">
+                        <input type="number" id="precioUnitario" placeholder="S/ 0.00" class="inptStyleGlobalModal"
+                            disabled />
+                        <button type="button" class="edit-btn negrita" title="Editar">✎</button>
+                    </div>
                 </div>
-                <div class="form-group labelBonito span-2">
-                    <label for="nombreRazonSocial" class="lblStyleGlobalModal  sinCopiar">Nombre o razón social</label>
-                    <input type="text" id="nombreRazonSocial" class="inptStyleGlobalModal" />
-                </div>
+
                 <div class="form-group labelBonito">
-                    <label for="telefono" class="lblStyleGlobalModal  sinCopiar">Teléfono</label>
-                    <input type="text" id="telefono" class="inptStyleGlobalModal" />
+                    <label for="cantidad" class="lblStyleGlobalModal">CANTIDAD</label>
+                    <div class="wrapper quantity-wrapper">
+                        <input type="number" id="cantidad" class="inptStyleGlobalModal" value="1" />
+                        <div class="decreaseIncreaseButtons">
+                            <button type="button" data-action="decremento-modal" class="negrita">-</button>
+                            <button type="button" data-action="incremento-modal" class="negrita">+</button>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Tercera fila -->
                 <div class="form-group labelBonito">
-                    <label for="email" class="lblStyleGlobalModal  sinCopiar">Email</label>
-                    <input type="email" id="email" class="inptStyleGlobalModal" autocomplete="email"/>
+                    <label for="descuento" class="lblStyleGlobalModal">DESCUENTO</label>
+                    <div class="wrapper discount-wrapper">
+                        <input type="number" id="descuento" class="inptStyleGlobalModal" placeholder="0.00" />
+                        <span class="percentage">%</span>
+                    </div>
                 </div>
-                <div class="form-group labelBonito span-2">
-                    <label for="direccion" class="lblStyleGlobalModal  sinCopiar">Dirección principal</label>
-                    <textarea id="direccion" rows="1" class="textAreaStyleGlobalModal"></textarea>
+
+                <div id="total" class="totalStyleGlobalModal sinCopiar">
+                    <span class="negrita">TOTAL >> </span>
+                    <span id="totalProductoModal" class="negrita">S/ 0.00</span>
+                </div>
+
+                <!-- Botón de guardar -->
+                <div class="form-group span-2" id="guardar">
+                    <button type="submit" class="btnStyleModalGlobal">Guardar</button>
                 </div>
             </form>
         </div>
-        <div class="modal-footer">
-            <button class="cancel-btn">Cancelar</button>
-            <button class="save-btn">Guardar</button>
+
+        <br><br>
+
+        <div class="modal escondido" id="modalDos">
+            <div class="modal-header">
+                <div class="header-title">
+                    <h2>Cliente / Proveedor</h2>
+                    <button class="close-btn">X</button>
+                </div>
+                <div class="header-tabs">
+                    <ul class="tabs">
+                        <li class="tab active-tab">INFORMACIÓN</li>
+                        <li class="tab">VENTAS</li>
+                        <li class="tab">PROFORMAS</li>
+                        <li class="tab">GUÍAS DE REMISIÓN</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form class="form" id="formCliente" method="POST">
+                    <div class="form-group labelBonito">
+                        <label for="tipoDocumento" class="lblStyleGlobalModal sinCopiar">Tipo de documento</label>
+                        <select id="tipoDocumento" class="selectStyleGlobalModal">
+                            <option value="ruc">RUC</option>
+                            <option value="dni">DNI</option>
+                        </select>
+                    </div>
+                    <div class="form-group labelBonito">
+                        <label for="numeroDocumento" class="lblStyleGlobalModal  sinCopiar">Número de documento</label>
+                        <input type="text" id="numeroDocumento" class="inptStyleGlobalModal" />
+                    </div>
+                    <div class="form-group labelBonito span-2">
+                        <label for="nombreRazonSocial" class="lblStyleGlobalModal  sinCopiar">Nombre o razón
+                            social</label>
+                        <input type="text" id="nombreRazonSocial" class="inptStyleGlobalModal" />
+                    </div>
+                    <div class="form-group labelBonito">
+                        <label for="telefono" class="lblStyleGlobalModal  sinCopiar">Teléfono</label>
+                        <input type="text" id="telefono" class="inptStyleGlobalModal" />
+                    </div>
+                    <div class="form-group labelBonito">
+                        <label for="email" class="lblStyleGlobalModal  sinCopiar">Email</label>
+                        <input type="email" id="email" class="inptStyleGlobalModal" autocomplete="email" />
+                    </div>
+                    <div class="form-group labelBonito span-2">
+                        <label for="direccion" class="lblStyleGlobalModal  sinCopiar">Dirección principal</label>
+                        <textarea id="direccion" rows="1" class="textAreaStyleGlobalModal"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-btn">Cancelar</button>
+                <button class="save-btn">Guardar</button>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="modal escondido" id="modalTres">
+            <div class="modal-header">
+                <div class="header-title">
+                    <h2>Comprobante Electronico</h2>
+                    <button type="button" class="close-btn" title="Cerrar">X</button>
+                </div>
+            </div>
+            <div class="content">
+                <!-- FACTURA ELECTRONICA -->
+                <div id="facturaElectronica" class="fondo-content">
+                    <span class="negrita">FACTURA ELECTRONICA</span>
+                    <span>FF04-3506</span>
+                    <span class="negrita">S/ 293.00</span>
+                </div>
+
+                <div id="informacionFactura" class="fondo-content">
+                    <!-- CLIENTE -->
+                    <div id="cliente">
+                        <span>CLIENTE</span>
+                        <span>TRANSPORTES ROMA CARGO SAC</span>
+                        <span>RUC 20608881990</span>
+                    </div>
+
+                    <!-- USUARIO -->
+                    <div id="usuario">
+                        <span>USUARIO</span>
+                        <span>JUAN SANTOS PIMENTEL</span>
+                        <span>27/11/2024 10:00 AM</span>
+                    </div>
+
+                    <!-- ESTADO SUNAT -->
+                    <div id="estadoSunat">
+                        <span>ESTADO SUNAT</span>
+                        <span>ACEPTADO</span>
+                    </div>
+                </div>
+
+                <!-- BOTONES -->
+                <div id="botones">
+                    <button type="button" class="btnStyleModalGlobal negrita">ENVIAR POR EMAIL</button>
+                    <button type="button" class="btnStyleModalGlobal negrita">VISUALIZAR PDF</button>
+                    <button type="button" class="btnStyleModalGlobal negrita">DESCARGAR PDF</button>
+                    <button type="button" class="btnStyleModalGlobal negrita">IMPRIMIR</button>
+                    <button type="button" class="btnStyleModalGlobal negrita">GUIA DE REMISIÓN</button>
+                    <button type="button" class="btnStyleModalGlobal negrita">NOTA DE CRÉDITO</button>
+                    <button type="button" class="btnStyleModalGlobal negrita">NOTA DE DÉBITO</button>
+                    <button type="button" class="btnStyleModalGlobal negrita">DESCARGAR XML</button>
+                    <button type="button" class="btnStyleModalGlobal negrita">DESCARGAR CDR</button>
+                    <button type="button" class="rojoBotonFondo btnStyleModalGlobal span-2 negrita">DAR DE BAJA
+                        (ANULAR)</button>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="modal escondido" id="modalCuatro">
+            <div class="header-container textAlignCenter">
+                <span>Hola <strong id="nombreUsuario">JUAN SANTOS PIMENTEL</strong></span>
+                <p>Aún no perteneces a ninguna empresa, puedes comenzar registrando una empresa para usar el servicio.
+                </p>
+            </div>
+            <div class="buttonContainer dirFlexCol">
+                <button type="button" class="negrita azulClaroBotonFondo blancoPuro btnSimpleStyle">REGISTRAR
+                    EMPRESA</button>
+                <button type="submit" class="negrita azulClaro blancoPuroBotonFondo btnSimpleStyle">CERRAR
+                    SESIÓN</button>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="modal escondido" id="modalCinco">
+            <div class="header-container textAlignJustified">
+                <span>Ingresa tu clave SOL</span>
+                <p>Al ingresar la <strong>CLAVE SOL</strong> se está autorizando su uso para dar de alta automáticamente
+                    a <strong>WOLF'S FUR</strong> como su <strong>PSE</strong> en <strong>SUNAT</strong>.</p>
+            </div>
+            <div class="input-container">
+                <div class="form-group">
+                    <input type="text" name="" id="rucUser" class="inptStyleGlobalModal" placeholder="RUC">
+                </div>
+                <div class="form-group labelBonito">
+                    <label for="userSOL">Usuario SOL</label>
+                    <input type="text" name="" id="userSOL" class="inptStyleGlobalModal" placeholder="Usuario SOL">
+                </div>
+                <div class="form-group labelBonito">
+                    <label for="contra">Contraseña SOL</label>
+                    <div class="pwd-container">
+                        <input type="password" name="" id="contra" class="inptStyleGlobalModal"
+                            placeholder="Contraseña SOL">
+                        <button type="button" class="btn-show-container" id="btnMostrarContra">
+                            <svg id="iconoOjoAbierto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" style="display: block;">
+                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            <svg id="iconoOjoCerrado" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" style="display: none;">
+                                <path d="M17.94 17.94A10.5 10.5 0 0 1 12 19.5a10.5 10.5 0 0 1-7.93-3.64M3 3l18 18">
+                                </path>
+                                <path d="M10.66 10.66A3 3 0 0 0 13.34 13.34"></path>
+                                <path d="M15.66 8.34A10.5 10.5 0 0 0 12 4.5a10.5 10.5 0 0 0-7.93 3.64"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="buttonContainer dirFlexRow">
+                <button type="button" class="negrita azulClaroBotonFondo blancoPuro btnSimpleStyle">REGISTRAR</button>
+                <button type="button" class="negrita azulClaro blancoPuroBotonFondo btnSimpleStyle">CANCELAR</button>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="modal activo-overlay" id="modalSeis">
+
+        </div>
+
+        <br><br>
+
+        <div class="modal activo-overlay-2" id="modalSiete">
+
+        </div>
+
+        <br><br>
+
+        <div class="modal activo-overlay" id="modalOcho">
+
+        </div>
+
+        <br><br>
+
+        <div class="modal activo-overlay-2" id="modalNueve">
+
         </div>
     </div>
 
-    <br></br>
-
-    <div class="modal escondido" id="modalTres">
-        <div class="modal-header">
-            <div class="header-title">
-                <h2>Comprobante Electronico</h2>
-                <button type="button" class="close-btn" title="Cerrar">X</button>
-            </div>
-        </div>
-        <div class="content">
-            <!-- FACTURA ELECTRONICA -->
-            <div id="facturaElectronica" class="fondo-content">
-                <span class="negrita">FACTURA ELECTRONICA</span>
-                <span>FF04-3506</span>
-                <span class="negrita">S/ 293.00</span>
-            </div>
-
-            <div id="informacionFactura" class="fondo-content">
-                <!-- CLIENTE -->
-                <div id="cliente">
-                    <span>CLIENTE</span>
-                    <span>TRANSPORTES ROMA CARGO SAC</span>
-                    <span>RUC 20608881990</span>
-                </div>
-
-                <!-- USUARIO -->
-                <div id="usuario">
-                    <span>USUARIO</span>
-                    <span>JUAN SANTOS PIMENTEL</span>
-                    <span>27/11/2024 10:00 AM</span>
-                </div>
-
-                <!-- ESTADO SUNAT -->
-                <div id="estadoSunat">
-                    <span>ESTADO SUNAT</span>
-                    <span>ACEPTADO</span>
-                </div>
-            </div>
-
-            <!-- BOTONES -->
-            <div id="botones">
-                <button type="button" class="btnStyleModalGlobal negrita">ENVIAR POR EMAIL</button>
-                <button type="button" class="btnStyleModalGlobal negrita">VISUALIZAR PDF</button>
-                <button type="button" class="btnStyleModalGlobal negrita">DESCARGAR PDF</button>
-                <button type="button" class="btnStyleModalGlobal negrita">IMPRIMIR</button>
-                <button type="button" class="btnStyleModalGlobal negrita">GUIA DE REMISIÓN</button>
-                <button type="button" class="btnStyleModalGlobal negrita">NOTA DE CRÉDITO</button>
-                <button type="button" class="btnStyleModalGlobal negrita">NOTA DE DÉBITO</button>
-                <button type="button" class="btnStyleModalGlobal negrita">DESCARGAR XML</button>
-                <button type="button" class="btnStyleModalGlobal negrita">DESCARGAR CDR</button>
-                <button type="button" class="rojoBotonFondo btnStyleModalGlobal span-2 negrita">DAR DE BAJA (ANULAR)</button>
-            </div>
-        </div>
-    </div>
     <script type="module" src="/JS/scriptModales.js"></script>
 </body>
 

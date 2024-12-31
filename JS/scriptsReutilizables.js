@@ -324,6 +324,7 @@ export function inicializarInputEditar() {
   const editButtons = document.querySelectorAll(".edit-btn");
   const modal = document.querySelector("#modalUno");
   const descuentoInput = document.getElementById("descuento");
+  const cantidadInput = document.getElementById("cantidad");
 
   if (editButtons) {
     editButtons.forEach((button) => {
@@ -332,7 +333,11 @@ export function inicializarInputEditar() {
           ".inptStyleGlobalModal"
         );
 
-        if (closestInput && closestInput !== descuentoInput) {
+        if (
+          closestInput &&
+          closestInput !== descuentoInput &&
+          closestInput !== cantidadInput
+        ) {
           closestInput.disabled = false;
           closestInput.focus();
           this.style.display = "none";
@@ -351,10 +356,12 @@ export function inicializarInputEditar() {
           const allEditButtons = modal.querySelectorAll(".edit-btn");
 
           allInputs.forEach((input) => {
-            if (input !== descuentoInput) {
+            if (input !== descuentoInput && input !== cantidadInput) {
               input.disabled = true;
             }
           });
+
+          cantidadInput.disabled = false;
 
           allEditButtons.forEach((button) => {
             button.style.display = "inline-block";
@@ -366,7 +373,6 @@ export function inicializarInputEditar() {
 
   observer.observe(modal, { attributes: true });
 }
-
 
 export function inicializarModalUno() {
   const cantidadInput = document.querySelector("#cantidad");
@@ -381,40 +387,71 @@ export function inicializarModalUno() {
     "[data-action='decremento-modal']"
   );
 
-  function calcularTotal() {
-    const cantidad = parseFloat(cantidadInput.value) || 0;
-    const precioUnitario = parseFloat(precioUnitarioInput.value) || 0;
-    const descuento = parseFloat(descuentoInput.value) || 0;
-    let valorDescuento = precioUnitario * (descuento / 100);
+  function inicializarEventos() {
+    incrementButton.addEventListener("click", incrementarCantidad);
+    decrementButton.addEventListener("click", decrementarCantidad);
 
-    const total = Math.max(precioUnitario * cantidad - valorDescuento, 0);
+    cantidadInput.addEventListener("input", manejarEntradaManualCantidad);
+    precioUnitarioInput.addEventListener("input", calcularTotal);
+    descuentoInput.addEventListener("input", manejarEntradaManualDescuento);
+
+    calcularTotal();
+  }
+
+  function calcularTotal() {
+    const cantidad = obtenerCantidadValida();
+    const precioUnitario = obtenerPrecioUnitarioValido();
+    const descuento = obtenerDescuentoValido();
+    const subtotal = precioUnitario * cantidad;
+    const valorDescuento = precioUnitario * (descuento / 100);
+    const total = subtotal - valorDescuento;
+
     totalDisplay.textContent = `S/ ${total.toFixed(2)}`;
   }
 
-  incrementButton.addEventListener("click", () => {
-    let cantidad = parseInt(cantidadInput.value) || 0;
-    cantidad = cantidad + 1;
+  function obtenerCantidadValida() {
+    let cantidad = parseInt(cantidadInput.value, 10);
+    if (isNaN(cantidad) || cantidad < 1) cantidad = 1;
+    cantidadInput.value = cantidad;
+    return cantidad;
+  }
+
+  function obtenerPrecioUnitarioValido() {
+    const precio = parseFloat(precioUnitarioInput.value);
+    return isNaN(precio) ? 0 : precio;
+  }
+
+  function obtenerDescuentoValido() {
+    let descuento = parseFloat(descuentoInput.value);
+    if (isNaN(descuento) || descuento < 0) descuento = 0;
+    if (descuento > 100) descuento = 100;
+    descuentoInput.value = descuento.toFixed(2);
+    return parseFloat(descuento.toFixed(2));
+  }
+
+  function incrementarCantidad() {
+    const cantidad = obtenerCantidadValida() + 1;
     cantidadInput.value = cantidad;
     calcularTotal();
-  });
+  }
 
-  decrementButton.addEventListener("click", () => {
-    let cantidad = parseInt(cantidadInput.value) || 0;
+  function decrementarCantidad() {
+    const cantidad = obtenerCantidadValida();
     if (cantidad > 1) {
-      cantidad = cantidad - 1;
-    }
-    cantidadInput.value = cantidad;
-    calcularTotal();
-  });
-
-  cantidadInput.addEventListener("input", () => {
-    let cantidad = parseInt(cantidadInput.value);
-    if (isNaN(cantidad) || cantidad < 1) {
-      cantidadInput.value = 1;
+      cantidadInput.value = cantidad - 1;
     }
     calcularTotal();
-  });
+  }
 
-  precioUnitarioInput.addEventListener("input", calcularTotal);
-  descuentoInput.addEventListener("input", calcularTotal);
+  function manejarEntradaManualCantidad() {
+    cantidadInput.value = obtenerCantidadValida();
+    calcularTotal();
+  }
+
+  function manejarEntradaManualDescuento() {
+    descuentoInput.value = obtenerDescuentoValido().toFixed(2);
+    calcularTotal();
+  }
+
+  inicializarEventos();
 }
