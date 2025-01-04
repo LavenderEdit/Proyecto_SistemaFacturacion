@@ -1,9 +1,9 @@
 export const signInDatos = {
-    formLogin : document.getElementById('formLogin'),
-    inputContra : document.getElementById('contra'),
-    iconoOjoAbierto : document.getElementById('iconoOjoAbierto'),
-    iconoOjoCerrado : document.getElementById('iconoOjoCerrado'),
-    btnMostrarContra : document.getElementById('btnMostrarContra')
+    formLogin: document.getElementById('formLogin'),
+    inputContra: document.querySelector('.contraClass'),
+    iconoOjoAbierto: document.querySelector('.iconoOjoAbierto'),
+    iconoOjoCerrado: document.querySelector('.iconoOjoCerrado'),
+    btnMostrarContra: document.querySelector('.btn-show-container')
 };
 
 export const billAppDatosFactura = {

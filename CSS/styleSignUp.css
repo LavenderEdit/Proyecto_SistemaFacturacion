@@ -21,7 +21,7 @@ body {
     position: absolute;
     right: 0;
     display: flex;
-    width: 520px;
+    width: auto;
     height: 100vh;
     clip-path: ellipse(100% 160% at right center);
     flex-direction: column;
@@ -41,7 +41,7 @@ body {
     position: absolute;
     left: 0;
     display: flex;
-    width: 280px;
+    width: auto;
     height: 100vh;
     flex-direction: column;
     justify-content: center;

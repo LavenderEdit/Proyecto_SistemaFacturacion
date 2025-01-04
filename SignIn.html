@@ -20,45 +20,26 @@
                 <a href="SignUp.html">CREAR UNA CUENTA AHORA</a>
             </button>
         </div>
-        
+
         <div id="iniciosesion">
             <h1 inert>Iniciar Sesion</h1>
             <form action="" id="formLogin" method="GET">
                 <div class="entradaLogin">
                     <input type="email" class="textoentrada" id="correo" name="correo" placeholder="Email" required>
                 </div>
-                <div class="entradaLogin" id="entradaContra">
-                    <input type="password" class="textoentrada" id="contra" name="contra" placeholder="Contraseña" required>
-                    <button type="button" id="btnMostrarContra">
-                        <svg 
-                            id="iconoOjoAbierto"
-                            xmlns="http://www.w3.org/2000/svg" 
-                            width="24" 
-                            height="24" 
-                            viewBox="0 0 24 24" 
-                            fill="none" 
-                            stroke="black" 
-                            stroke-width="2" 
-                            stroke-linecap="round" 
-                            stroke-linejoin="round"
-                            style="display: block;"
-                        >
+                <div class="entradaLogin pwd-container">
+                    <input type="password" class="textoentrada contraClass" id="contra" name="contra"
+                        placeholder="Contraseña" required>
+                    <button type="button" class="btn-show-container">
+                        <svg class="iconoOjoAbierto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" style="display: block;">
                             <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
                             <circle cx="12" cy="12" r="3"></circle>
                         </svg>
-                        <svg 
-                            id="iconoOjoCerrado"
-                            xmlns="http://www.w3.org/2000/svg" 
-                            width="24" 
-                            height="24" 
-                            viewBox="0 0 24 24" 
-                            fill="none" 
-                            stroke="black" 
-                            stroke-width="2" 
-                            stroke-linecap="round" 
-                            stroke-linejoin="round"
-                            style="display: none;"
-                        >
+                        <svg class="iconoOjoCerrado" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" style="display: none;">
                             <path d="M17.94 17.94A10.5 10.5 0 0 1 12 19.5a10.5 10.5 0 0 1-7.93-3.64M3 3l18 18"></path>
                             <path d="M10.66 10.66A3 3 0 0 0 13.34 13.34"></path>
                             <path d="M15.66 8.34A10.5 10.5 0 0 0 12 4.5a10.5 10.5 0 0 0-7.93 3.64"></path>

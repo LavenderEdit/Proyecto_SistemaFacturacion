@@ -2,11 +2,14 @@
 @import url('./ReajustadorDeMargenes.css');
 @import url('./ClasesGenerales.css');
 @import url('./Colores.css');
+
+/* Estilos personalizados para cada modal */
 @import url('./styleModalEditarProducto.css');
 @import url('./styleModalCliente.css');
 @import url('./styleModalVenta.css');
 @import url('./styleModalRegistrarEmpresa.css');
 @import url('./styleModalClaveSol.css');
+@import url('./styleModalCambioContra.css');
 
 #modal-container {
   position: fixed;
@@ -22,7 +25,15 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-40%, -65%);
+  transform: translate(-50%, -50%);
+  z-index: 1002;
+}
+
+.modal-type-2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -63%);
   z-index: 1002;
 }
 
@@ -69,8 +80,7 @@
 .buttonContainer {
   display: flex;
   gap: 10px;
-  margin-block: 0 10px;
-  width: 100%;
+  padding: 3px 15px;
 }
 
 .btnSimpleStyle {
@@ -78,13 +88,14 @@
   font-size: 0.9em;
   border: none;
   border-radius: 5px;
+  margin-inline: auto;
+  margin-bottom: auto;
   padding: 10px 20px;
   cursor: pointer;
 }
 
 .input-container {
-  width: 100%;
-  height: 100%;
+  padding: 15px;
 }
 
 /* Modal */
