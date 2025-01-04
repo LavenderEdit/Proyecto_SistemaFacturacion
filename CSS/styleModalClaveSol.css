@@ -1,6 +1,6 @@
 #modalCinco {
     width: 350px;
-    height: 375px;
+    height: auto;
     background-color: white;
     margin: 50px auto;
     border-radius: 10px;
@@ -8,6 +8,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px;
+    padding: 15px;
     border: 1px solid #E0E0E0;
 }

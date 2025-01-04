@@ -1,0 +1,13 @@
+#modalSeis {
+    width: 400px;
+    margin: 15px auto;
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    grid-template-rows: 20% 60% 20%;
+    overflow: hidden;
+    min-height: 150px;
+    max-height: 500px;
+    height: auto;
+}

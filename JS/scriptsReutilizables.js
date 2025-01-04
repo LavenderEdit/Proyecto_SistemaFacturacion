@@ -1,20 +1,31 @@
-import { signInDatos, billAppDatosFactura } from "./scriptsDatosPaginas.js";
+import { billAppDatosFactura } from "./scriptsDatosPaginas.js";
 import { showModal } from "./scriptMensajes.js";
 
 export function togglePassword() {
-  if (signInDatos.btnMostrarContra && signInDatos.inputContra) {
-    signInDatos.btnMostrarContra.addEventListener("click", function () {
-      if (signInDatos.inputContra.type === "password") {
-        signInDatos.inputContra.type = "text";
-        signInDatos.iconoOjoAbierto.style.display = "none";
-        signInDatos.iconoOjoCerrado.style.display = "block";
-      } else {
-        signInDatos.inputContra.type = "password";
-        signInDatos.iconoOjoAbierto.style.display = "block";
-        signInDatos.iconoOjoCerrado.style.display = "none";
+  const btnMostrarContraList = document.querySelectorAll(".btn-show-container");
+
+  btnMostrarContraList.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const parent = btn.closest(".pwd-container");
+      if (parent) {
+        const inputContra = parent.querySelector(".contraClass");
+        const iconoOjoAbierto = parent.querySelector(".iconoOjoAbierto");
+        const iconoOjoCerrado = parent.querySelector(".iconoOjoCerrado");
+
+        if (inputContra && iconoOjoAbierto && iconoOjoCerrado) {
+          if (inputContra.type === "password") {
+            inputContra.type = "text";
+            iconoOjoAbierto.style.display = "none";
+            iconoOjoCerrado.style.display = "block";
+          } else {
+            inputContra.type = "password";
+            iconoOjoAbierto.style.display = "block";
+            iconoOjoCerrado.style.display = "none";
+          }
+        }
       }
     });
-  }
+  });
 }
 
 export function checkInputToAsignCustomer(clienteInput) {
