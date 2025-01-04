@@ -10,7 +10,8 @@
 
 <body>
     <div id="modal-container">
-        <div class="modal escondido" id="modalUno">
+        <!-- activo-overlay -->
+        <div class="modal-type-2 escondido" id="modalUno">
             <form id="formProducto">
                 <!-- Primera fila -->
                 <div class="form-group labelBonito">
@@ -73,7 +74,8 @@
 
         <br><br>
 
-        <div class="modal escondido" id="modalDos">
+        <!-- activo-overlay-2 -->
+        <div class="modal-type-2 escondido" id="modalDos">
             <div class="modal-header">
                 <div class="header-title">
                     <h2>Cliente / Proveedor</h2>
@@ -128,6 +130,7 @@
 
         <br><br>
 
+        <!-- activo-overlay-2 -->
         <div class="modal-type-2 escondido" id="modalTres">
             <div class="modal-header">
                 <div class="header-title">
@@ -184,7 +187,8 @@
 
         <br><br>
 
-        <div class="modal escondido" id="modalCuatro">
+        <!-- activo-overlay -->
+        <div class="modal-type-2 escondido" id="modalCuatro">
             <div class="header-container textAlignCenter">
                 <span>Hola <strong id="nombreUsuario">JUAN SANTOS PIMENTEL</strong></span>
                 <p>Aún no perteneces a ninguna empresa, puedes comenzar registrando una empresa para usar el servicio.
@@ -200,7 +204,8 @@
 
         <br><br>
 
-        <div class="modal escondido" id="modalCinco">
+        <!-- activo-overlay -->
+        <div class="modal-type-2 escondido" id="modalCinco">
             <div class="header-container textAlignJustified">
                 <span>Ingresa tu clave SOL</span>
                 <p>Al ingresar la <strong>CLAVE SOL</strong> se está autorizando su uso para dar de alta automáticamente
@@ -217,16 +222,16 @@
                 <div class="form-group labelBonito">
                     <label for="contra">Contraseña SOL</label>
                     <div class="pwd-container">
-                        <input type="password" name="" id="contra" class="inptStyleGlobalModal"
+                        <input type="password" name="" id="contra" class="inptStyleGlobalModal contraClass"
                             placeholder="Contraseña SOL">
                         <button type="button" class="btn-show-container" id="btnMostrarContra">
-                            <svg id="iconoOjoAbierto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            <svg class="iconoOjoAbierto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" style="display: block;">
                                 <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
                             </svg>
-                            <svg id="iconoOjoCerrado" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            <svg class="iconoOjoCerrado" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" style="display: none;">
                                 <path d="M17.94 17.94A10.5 10.5 0 0 1 12 19.5a10.5 10.5 0 0 1-7.93-3.64M3 3l18 18">
@@ -246,7 +251,8 @@
 
         <br><br>
 
-        <div class="modal activo-overlay-2" id="modalSeis">
+        <!-- activo-overlay-2 -->
+        <div class="modal escondido" id="modalSeis">
             <div class="modal-header">
                 <div class="header-title">
                     <h2>Cambiar Contraseña</h2>
@@ -309,19 +315,27 @@
 
         <br><br>
 
-        <div class="modal activo-overlay-2" id="modalSiete">
-            
+        <!-- activo-overlay -->
+        <div class="modal-type-2 activo-overlay" id="modalSiete">
+            <div class="header-container">
+                <span> Enviar por email </span>
+            </div>
+            <div class="input-container full-size">
+                <div class="form-group labelBonito">
+                    <label for="correoElect">Email</label>
+                    <input type="email" name="" id="correoElect" placeholder="Email" class="inptStyleGlobalModal"
+                        autocomplete="email">
+                </div>
+            </div>
+            <div class="buttonContainer dirFlexRow">
+                <button type="button" class="negrita azulClaroBotonFondo blancoPuro btnSimpleStyle">ENVIAR</button>
+                <button type="button" class="negrita azulClaro blancoPuroBotonFondo btnSimpleStyle">CANCELAR</button>
+            </div>
         </div>
 
         <br><br>
 
-        <div class="modal activo-overlay" id="modalOcho">
-
-        </div>
-
-        <br><br>
-
-        <div class="modal activo-overlay-2" id="modalNueve">
+        <div class="modal activo-overlay-2" id="modalOcho">
 
         </div>
     </div>

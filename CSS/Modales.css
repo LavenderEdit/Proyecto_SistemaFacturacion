@@ -10,6 +10,7 @@
 @import url('./styleModalRegistrarEmpresa.css');
 @import url('./styleModalClaveSol.css');
 @import url('./styleModalCambioContra.css');
+@import url('./styleModalEnviarPorCorreo.css');
 
 #modal-container {
   position: fixed;
