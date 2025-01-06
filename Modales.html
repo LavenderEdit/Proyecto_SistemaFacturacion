@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <div id="modal-container">
+    <div class="modal-container z-index-2">
         <!-- activo-overlay -->
-        <div class="modal-type-2 escondido" id="modalUno">
+        <div class="modal-type-2 z-index-3 escondido" id="modalUno">
             <form id="formProducto">
                 <!-- Primera fila -->
                 <div class="form-group labelBonito">
@@ -75,11 +75,11 @@
         <br><br>
 
         <!-- activo-overlay-2 -->
-        <div class="modal-type-2 escondido" id="modalDos">
+        <div class="modal-type-2 z-index-3 escondido" id="modalDos">
             <div class="modal-header">
                 <div class="header-title">
                     <h2>Cliente / Proveedor</h2>
-                    <button class="close-btn">X</button>
+                    <button class="close-btn blancoPuro">X</button>
                 </div>
                 <div class="header-tabs">
                     <ul class="tabs">
@@ -131,11 +131,11 @@
         <br><br>
 
         <!-- activo-overlay-2 -->
-        <div class="modal-type-2 escondido" id="modalTres">
+        <div class="modal-type-2 z-index-3 escondido" id="modalTres">
             <div class="modal-header">
                 <div class="header-title">
                     <h2>Comprobante Electronico</h2>
-                    <button type="button" class="close-btn" title="Cerrar">X</button>
+                    <button type="button" class="close-btn blancoPuro" title="Cerrar">X</button>
                 </div>
             </div>
             <div class="content">
@@ -188,7 +188,7 @@
         <br><br>
 
         <!-- activo-overlay -->
-        <div class="modal-type-2 escondido" id="modalCuatro">
+        <div class="modal-type-2 z-index-3 escondido" id="modalCuatro">
             <div class="header-container textAlignCenter">
                 <span>Hola <strong id="nombreUsuario">JUAN SANTOS PIMENTEL</strong></span>
                 <p>Aún no perteneces a ninguna empresa, puedes comenzar registrando una empresa para usar el servicio.
@@ -205,7 +205,7 @@
         <br><br>
 
         <!-- activo-overlay -->
-        <div class="modal-type-2 escondido" id="modalCinco">
+        <div class="modal-type-2 z-index-3 escondido" id="modalCinco">
             <div class="header-container textAlignJustified">
                 <span>Ingresa tu clave SOL</span>
                 <p>Al ingresar la <strong>CLAVE SOL</strong> se está autorizando su uso para dar de alta automáticamente
@@ -252,11 +252,11 @@
         <br><br>
 
         <!-- activo-overlay-2 -->
-        <div class="modal escondido" id="modalSeis">
+        <div class="modal z-index-3 escondido" id="modalSeis">
             <div class="modal-header">
                 <div class="header-title">
                     <h2>Cambiar Contraseña</h2>
-                    <button type="button" class="close-btn" title="Cerrar">X</button>
+                    <button type="button" class="close-btn blancoPuro" title="Cerrar">X</button>
                 </div>
             </div>
             <div class="input-container">
@@ -316,7 +316,7 @@
         <br><br>
 
         <!-- activo-overlay -->
-        <div class="modal-type-2 activo-overlay" id="modalSiete">
+        <div class="modal-type-2 z-index-3 escondido" id="modalSiete">
             <div class="header-container">
                 <span> Enviar por email </span>
             </div>
@@ -335,8 +335,120 @@
 
         <br><br>
 
-        <div class="modal activo-overlay-2" id="modalOcho">
+        <!-- activo-overlay-2 -->
+        <!-- cambio y añadido de clases cuando abre el modal repetitivo => z-index-1, no-disponible -->
+        <div class="modal-type-2 z-index-3 escondido" id="modalOcho">
+            <div class="modal-header">
+                <div class="header-title">
+                    <h2>Guía de Remisión - Remitente</h2>
+                    <button class="close-btn blancoPuro">X</button>
+                </div>
+                <div class="header-tabs">
+                    <ul class="tabs">
+                        <li class="tab active-tab">INFORMACIÓN BÁSICA</li>
+                        <li class="tab">DATOS DEL ENVIO</li>
+                        <li class="tab">PRODUCTOS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form class="form" id="formGuia" method="POST">
+                    <div class="form-group labelBonito">
+                        <label for="serieGuia" class="lblStyleGlobalModal sinCopiar">Serie</label>
+                        <select id="serieGuia" class="selectStyleGlobalModal">
+                            <option value="T004">T004</option>
+                            <option value="TO04">TO04</option>
+                        </select>
+                    </div>
+                    <div class="form-group labelBonito">
+                        <label for="guiaEmision" class="lblStyleGlobalModal  sinCopiar">Fecha de emisión</label>
+                        <input type="date" id="guiaEmision" class="inptStyleGlobalModal" />
+                    </div>
+                    <div class="form-group labelBonito span-2">
+                        <label for="guiaNomDestinario" class="lblStyleGlobalModal  sinCopiar">Destinatario</label>
+                        <input type="search" id="guiaNomDestinario" class="inptStyleGlobalModal" />
+                    </div>
+                    <div class="form-group labelBonito span-2">
+                        <label for="guiaObservaciones" class="lblStyleGlobalModal  sinCopiar">Observaciones</label>
+                        <input type="text" id="guiaObservaciones" class="inptStyleGlobalModal" />
+                    </div>
+                    <div class="form-group labelBonito">
+                        <label for="guiaOrigen" class="lblStyleGlobalModal  sinCopiar">Origen</label>
+                        <input type="search" id="guiaOrigen" class="inptStyleGlobalModal" placeholder="Ubigeo" />
+                    </div>
+                    <div class="form-group labelBonito">
+                        <label for="guiaDestino" class="lblStyleGlobalModal  sinCopiar">Destino</label>
+                        <input type="search" id="guiaDestino" class="inptStyleGlobalModal" placeholder="Ubigeo" />
+                    </div>
+                    <div class="form-group labelBonito">
+                        <label for="guiaDireccionOrigen" class="lblStyleGlobalModal  sinCopiar">Dirección</label>
+                        <input id="guiaDireccionOrigen" class="inptStyleGlobalModal" />
+                    </div>
+                    <div class="form-group labelBonito">
+                        <label for="guiaDireccionDestino" class="lblStyleGlobalModal  sinCopiar">Dirección</label>
+                        <input id="guiaDireccionDestino" class="inptStyleGlobalModal" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-btn">Cancelar</button>
+                <button class="save-btn">Procesar</button>
+            </div>
+        </div>
 
+        <div class="modal z-index-4 escondido" id="modalRepetitivo">
+            <div class="modal-header-2">
+                <button type="button" class="close-btn negroPuro">X</button>
+                <input type="search" id="inptSearch" class="inptStyleSearch" placeholder="Buscar ubigeo...">
+                <!--
+                <input type="search" id="inptSearch" class="inptStyleSearch" placeholder="Buscar producto/servicio">
+                <input type="search" id="inptSearch" class="inptStyleSearch" placeholder="Buscar cliente/proveedor">
+                -->
+            </div>
+            <div class="modal-search-result">
+                <!-- Here will appear dynamic data -->
+                <!-- By default this one paragraph will appear encapsulated in this div -->
+                <!-- Three options for this to appear -->
+                <div class="default-search-result sinCopiar">
+                    <!-- first when searching for locations-->
+                    <p>Busca un ubigeo por región, provincia o distrito</p>
+                    <!-- second when searching for a producto or service -->
+                    <p>Busca un producto/servicio por su nombre o código</p>
+                    <!-- third when searching for a customer -->
+                    <p>Busca un cliente o proveedor por su nombre o documento</p>
+                    
+                </div>
+
+
+                <!-- Whenever there's a search that cannot be found this will appear -->
+                <!--
+                <div class="no-search-result sinCopiar">
+                    <p>No se encontraron resultados para su busqueda</p>
+                </div>
+                -->
+
+                <!-- Or else it will appear this other div -->
+                <!--
+                <div class="search-result">
+                    <ol class="result-capsule">
+                        <li class="list-container">
+                            <h4>LIMATAMBO/ANTA/CUSCO</h4>
+                            <p>080306</p>
+                        </li>
+                        <li class="list-container">
+                            <h4>PRODUCTO</h4>
+                            <p>P001</p>
+                            <p>LUBRICANTES</p>
+                            <p>UNIDADES</p>
+                        </li>
+                        <li class="list-container">
+                            <h4>COLUNGA APAZA DE LIÑAN NORA AURELIA</h4>
+                            <p>10070919686</p>
+                        </li>
+                    </ol>
+                </div>
+                -->
+            </div>
         </div>
     </div>
 
