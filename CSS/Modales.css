@@ -11,12 +11,14 @@
 @import url('./styleModalClaveSol.css');
 @import url('./styleModalCambioContra.css');
 @import url('./styleModalEnviarPorCorreo.css');
+@import url('./styleModalGuiaRemision.css');
+@import url('./styleModalBusqueda.css');
 
-#modal-container {
+.modal-container {
   position: fixed;
+  display: flex;
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1001;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -27,7 +29,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1002;
 }
 
 .modal-type-2 {
@@ -35,7 +36,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -63%);
-  z-index: 1002;
 }
 
 /* Botones */
@@ -62,43 +62,6 @@
   background-color: #233782;
 }
 
-/* NEW STUFF */
-.header-container {
-  margin-block: 20px;
-}
-
-.header-container span {
-  font-size: 1.5em;
-  color: #424242;
-}
-
-.header-container p {
-  margin-top: 20px;
-  font-size: 1em;
-  color: #616161;
-}
-
-.buttonContainer {
-  display: flex;
-  gap: 10px;
-  padding: 3px 15px;
-}
-
-.btnSimpleStyle {
-  font-weight: bold;
-  font-size: 0.9em;
-  border: none;
-  border-radius: 5px;
-  margin-inline: auto;
-  margin-bottom: auto;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.input-container {
-  padding: 15px;
-}
-
 /* Modal */
 .modal-header {
   background-color: #334FBA;
@@ -120,16 +83,15 @@
   font-size: 1.2rem;
 }
 
-.header-title .close-btn {
+.close-btn {
   background: none;
   border: none;
-  color: white;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.header-title .close-btn:hover {
+.close-btn:hover {
   opacity: 0.8;
 }
 
@@ -195,4 +157,213 @@
   color: black;
   border-radius: 15px;
   height: 50px;
+}
+
+/* =============== */
+/* NEW STUFF */
+/* =============== */
+.header-container {
+  margin-block: 20px;
+}
+
+.header-container span {
+  font-size: 1.5em;
+  color: #424242;
+}
+
+.header-container p {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #616161;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  padding: 3px 15px;
+}
+
+.btnSimpleStyle {
+  font-weight: bold;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 5px;
+  margin-inline: auto;
+  margin-bottom: auto;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.input-container {
+  padding: 15px;
+}
+
+.modal-header-2 {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+}
+
+.inptStyleSearch {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.inptStyleSearch:focus {
+  border-color: #007bff;
+}
+
+.modal-search-result {
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.default-search-result, .no-search-result {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  font-style: italic;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  align-content: center;
+}
+
+.default-search-result p, .no-search-result p {
+  background-color: wheat;
+  border: 5px solid gray;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.search-result {
+  display: block;
+}
+
+.result-capsule {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.list-container {
+  padding: 10px;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow-y: auto;
+  transition: background-color 0.3s ease;
+}
+
+.list-container:last-child {
+  border-bottom: none;
+}
+
+.list-container:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.list-container h4 {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  font-weight: bold;
+}
+
+.list-container p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* ========================= */
+/* OLD STUFF NEWLY ADDED */
+/* ========================= */
+.modal-body {
+  grid-row: 2;
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  grid-row: 3;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 20px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ccc;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 2px solid #4a6ae1;
+}
+
+.tab {
+  border-radius: 5px 5px 0 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: none;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.modal-footer button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn {
+  background-color: #e0e0e0;
+  margin-right: 10px;
+}
+
+.cancel-btn:hover {
+  background-color: darkred;
+  margin-right: 10px;
+}
+
+.save-btn {
+  background-color: #334FBA;
+}
+
+.modal-footer button:hover {
+  opacity: 0.8;
 }

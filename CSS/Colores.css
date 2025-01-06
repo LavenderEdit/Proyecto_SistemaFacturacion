@@ -1,3 +1,7 @@
+.negroPuro {
+    color: black;
+}
+
 .blancoPuro {
     color: white;
 }
@@ -42,4 +46,8 @@
 .azulClaroBotonFondo:hover,
 .blancoPuroBotonFondo:hover {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.negroPuro:hover {
+    color: #1E88E5;
 }

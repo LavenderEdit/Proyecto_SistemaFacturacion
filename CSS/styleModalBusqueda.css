@@ -1,0 +1,9 @@
+#modalRepetitivo {
+    background-color: white;
+    height: 80vh;
+    width: auto;
+    padding: 2px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    grid-template-rows: auto 1fr;
+}
